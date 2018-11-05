@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="MainAppWindows.Models.Andelshaver">
+    <Position X="9" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAIAAAAAAAAAAAQgAAAKAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Andelshaver.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MainAppWindows.Models.CurrentUser">
+    <Position X="11.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAAAAAAAAAAAAAAAAgEAAAAAAAAAAA=</HashCode>
+      <FileName>Models\CurrentUser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MainAppWindows.Models.Faldstamme">
+    <Position X="7.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAEAAAAABAAAAgAQAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Models\Faldstamme.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MainAppWindows.Models.Kontrakt">
+    <Position X="9" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAgIAAJAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Kontrakt.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MainAppWindows.Models.Lejlighed">
+    <Position X="7.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EBAAAAKAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAA=</HashCode>
+      <FileName>Models\Lejlighed.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MainAppWindows.Models.StatusRaport">
+    <Position X="5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAAAAAQAAAAAAAAEABABAAAAAEAAAA=</HashCode>
+      <FileName>Models\StatusRaport.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MainAppWindows.Models.StatusRaportFaldstamme">
+    <Position X="5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAQAAAAAAAAA=</HashCode>
+      <FileName>Models\StatusRaportFaldstamme.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="MainAppWindows.Models.StatusValues">
+    <Position X="5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>Models\enum_StatusValues.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="MainAppWindows.Models.StatusRaportTypes">
+    <Position X="6.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAIAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\StatusRaportTypes.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
