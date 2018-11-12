@@ -30348,11 +30348,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\null\\Source\\Repos\\boligadministrationssystem\\MainAppWindows\\MainAppWindows\\MainAppWindows.csproj",
+      "projectUniqueName": "C:\\Users\\null\\OneDrive - ErhvervsAkademi Sjælland\\Dokumenter\\Prøver\\2. Semester\\boligadministrationssystem\\MainAppWindows\\MainAppWindows\\MainAppWindows.csproj",
       "projectName": "MainAppWindows",
-      "projectPath": "C:\\Users\\null\\Source\\Repos\\boligadministrationssystem\\MainAppWindows\\MainAppWindows\\MainAppWindows.csproj",
+      "projectPath": "C:\\Users\\null\\OneDrive - ErhvervsAkademi Sjælland\\Dokumenter\\Prøver\\2. Semester\\boligadministrationssystem\\MainAppWindows\\MainAppWindows\\MainAppWindows.csproj",
       "packagesPath": "C:\\Users\\null\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\null\\Source\\Repos\\boligadministrationssystem\\MainAppWindows\\MainAppWindows\\obj\\",
+      "outputPath": "C:\\Users\\null\\OneDrive - ErhvervsAkademi Sjælland\\Dokumenter\\Prøver\\2. Semester\\boligadministrationssystem\\MainAppWindows\\MainAppWindows\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [

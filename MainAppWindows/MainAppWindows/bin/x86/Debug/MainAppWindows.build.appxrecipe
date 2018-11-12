@@ -10,22 +10,22 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>21F26101-D0DA-4455-A1A4-2753413D39AE</PackageIdentityName>
     <PackageIdentityPublisher>CN=Null</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\null\Source\Repos\boligadministrationssystem\MainAppWindows\MainAppWindows\obj\x86\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\null\OneDrive - ErhvervsAkademi Sjælland\Dokumenter\Prøver\2. Semester\boligadministrationssystem\MainAppWindows\MainAppWindows\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType></RemoteDeploymentType>
     <PackageRegistrationPath></PackageRegistrationPath>
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>C:\Users\null\Source\Repos\boligadministrationssystem\MainAppWindows\MainAppWindows\bin\x86\Debug\AppX</LayoutDir>
+    <LayoutDir>C:\Users\null\OneDrive - ErhvervsAkademi Sjælland\Dokumenter\Prøver\2. Semester\boligadministrationssystem\MainAppWindows\MainAppWindows\bin\x86\Debug\AppX</LayoutDir>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\null\Source\Repos\boligadministrationssystem\MainAppWindows\MainAppWindows\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\null\OneDrive - ErhvervsAkademi Sjælland\Dokumenter\Prøver\2. Semester\boligadministrationssystem\MainAppWindows\MainAppWindows\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\null\Source\Repos\boligadministrationssystem\MainAppWindows\MainAppWindows\bin\x86\Debug\MainAppWindows.exe">
+    <AppxPackagedFile Include="C:\Users\null\OneDrive - ErhvervsAkademi Sjælland\Dokumenter\Prøver\2. Semester\boligadministrationssystem\MainAppWindows\MainAppWindows\bin\x86\Debug\MainAppWindows.exe">
       <PackagePath>entrypoint\MainAppWindows.exe</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\null\.nuget\packages\microsoft.aspnet.webapi.client\5.2.3\lib\portable-wp8+netcore45+net45+wp81+wpa81\System.Net.Http.Formatting.dll">
@@ -430,73 +430,73 @@
     <AppxPackagedFile Include="C:\Users\null\.nuget\packages\win2d.uwp\1.19.0\lib\uap10.0\Microsoft.Graphics.Canvas.winmd">
       <PackagePath>Microsoft.Graphics.Canvas.winmd</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\null\Source\Repos\boligadministrationssystem\MainAppWindows\MainAppWindows\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\null\OneDrive - ErhvervsAkademi Sjælland\Dokumenter\Prøver\2. Semester\boligadministrationssystem\MainAppWindows\MainAppWindows\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\null\Source\Repos\boligadministrationssystem\MainAppWindows\MainAppWindows\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\null\OneDrive - ErhvervsAkademi Sjælland\Dokumenter\Prøver\2. Semester\boligadministrationssystem\MainAppWindows\MainAppWindows\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\null\Source\Repos\boligadministrationssystem\MainAppWindows\MainAppWindows\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\null\OneDrive - ErhvervsAkademi Sjælland\Dokumenter\Prøver\2. Semester\boligadministrationssystem\MainAppWindows\MainAppWindows\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\null\Source\Repos\boligadministrationssystem\MainAppWindows\MainAppWindows\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\null\OneDrive - ErhvervsAkademi Sjælland\Dokumenter\Prøver\2. Semester\boligadministrationssystem\MainAppWindows\MainAppWindows\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\null\Source\Repos\boligadministrationssystem\MainAppWindows\MainAppWindows\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\null\OneDrive - ErhvervsAkademi Sjælland\Dokumenter\Prøver\2. Semester\boligadministrationssystem\MainAppWindows\MainAppWindows\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\null\Source\Repos\boligadministrationssystem\MainAppWindows\MainAppWindows\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\null\OneDrive - ErhvervsAkademi Sjælland\Dokumenter\Prøver\2. Semester\boligadministrationssystem\MainAppWindows\MainAppWindows\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\null\Source\Repos\boligadministrationssystem\MainAppWindows\MainAppWindows\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\null\OneDrive - ErhvervsAkademi Sjælland\Dokumenter\Prøver\2. Semester\boligadministrationssystem\MainAppWindows\MainAppWindows\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\null\Source\Repos\boligadministrationssystem\MainAppWindows\MainAppWindows\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\null\OneDrive - ErhvervsAkademi Sjælland\Dokumenter\Prøver\2. Semester\boligadministrationssystem\MainAppWindows\MainAppWindows\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\null\Source\Repos\boligadministrationssystem\MainAppWindows\MainAppWindows\bin\x86\Debug\MainAppWindows.xr.xml">
+    <AppxPackagedFile Include="C:\Users\null\OneDrive - ErhvervsAkademi Sjælland\Dokumenter\Prøver\2. Semester\boligadministrationssystem\MainAppWindows\MainAppWindows\bin\x86\Debug\MainAppWindows.xr.xml">
       <PackagePath>MainAppWindows.xr.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\null\Source\Repos\boligadministrationssystem\MainAppWindows\MainAppWindows\bin\x86\Debug\App.xbf">
+    <AppxPackagedFile Include="C:\Users\null\OneDrive - ErhvervsAkademi Sjælland\Dokumenter\Prøver\2. Semester\boligadministrationssystem\MainAppWindows\MainAppWindows\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\null\Source\Repos\boligadministrationssystem\MainAppWindows\MainAppWindows\bin\x86\Debug\Styles\_Colors.xbf">
+    <AppxPackagedFile Include="C:\Users\null\OneDrive - ErhvervsAkademi Sjælland\Dokumenter\Prøver\2. Semester\boligadministrationssystem\MainAppWindows\MainAppWindows\bin\x86\Debug\Styles\_Colors.xbf">
       <PackagePath>Styles\_Colors.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\null\Source\Repos\boligadministrationssystem\MainAppWindows\MainAppWindows\bin\x86\Debug\Styles\_FontSizes.xbf">
+    <AppxPackagedFile Include="C:\Users\null\OneDrive - ErhvervsAkademi Sjælland\Dokumenter\Prøver\2. Semester\boligadministrationssystem\MainAppWindows\MainAppWindows\bin\x86\Debug\Styles\_FontSizes.xbf">
       <PackagePath>Styles\_FontSizes.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\null\Source\Repos\boligadministrationssystem\MainAppWindows\MainAppWindows\bin\x86\Debug\Styles\_Thickness.xbf">
+    <AppxPackagedFile Include="C:\Users\null\OneDrive - ErhvervsAkademi Sjælland\Dokumenter\Prøver\2. Semester\boligadministrationssystem\MainAppWindows\MainAppWindows\bin\x86\Debug\Styles\_Thickness.xbf">
       <PackagePath>Styles\_Thickness.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\null\Source\Repos\boligadministrationssystem\MainAppWindows\MainAppWindows\bin\x86\Debug\Styles\TextBlock.xbf">
+    <AppxPackagedFile Include="C:\Users\null\OneDrive - ErhvervsAkademi Sjælland\Dokumenter\Prøver\2. Semester\boligadministrationssystem\MainAppWindows\MainAppWindows\bin\x86\Debug\Styles\TextBlock.xbf">
       <PackagePath>Styles\TextBlock.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\null\Source\Repos\boligadministrationssystem\MainAppWindows\MainAppWindows\bin\x86\Debug\Views\AndelshaverPage.xbf">
+    <AppxPackagedFile Include="C:\Users\null\OneDrive - ErhvervsAkademi Sjælland\Dokumenter\Prøver\2. Semester\boligadministrationssystem\MainAppWindows\MainAppWindows\bin\x86\Debug\Views\AndelshaverPage.xbf">
       <PackagePath>Views\AndelshaverPage.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\null\Source\Repos\boligadministrationssystem\MainAppWindows\MainAppWindows\bin\x86\Debug\Views\Lejlighed\LejlighedPage.xbf">
+    <AppxPackagedFile Include="C:\Users\null\OneDrive - ErhvervsAkademi Sjælland\Dokumenter\Prøver\2. Semester\boligadministrationssystem\MainAppWindows\MainAppWindows\bin\x86\Debug\Views\Lejlighed\LejlighedPage.xbf">
       <PackagePath>Views\Lejlighed\LejlighedPage.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\null\Source\Repos\boligadministrationssystem\MainAppWindows\MainAppWindows\bin\x86\Debug\Views\Login\LoginPage.xbf">
+    <AppxPackagedFile Include="C:\Users\null\OneDrive - ErhvervsAkademi Sjælland\Dokumenter\Prøver\2. Semester\boligadministrationssystem\MainAppWindows\MainAppWindows\bin\x86\Debug\Views\Login\LoginPage.xbf">
       <PackagePath>Views\Login\LoginPage.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\null\Source\Repos\boligadministrationssystem\MainAppWindows\MainAppWindows\bin\x86\Debug\Views\MainPage.xbf">
+    <AppxPackagedFile Include="C:\Users\null\OneDrive - ErhvervsAkademi Sjælland\Dokumenter\Prøver\2. Semester\boligadministrationssystem\MainAppWindows\MainAppWindows\bin\x86\Debug\Views\MainPage.xbf">
       <PackagePath>Views\MainPage.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\null\Source\Repos\boligadministrationssystem\MainAppWindows\MainAppWindows\bin\x86\Debug\Views\ShellPage.xbf">
+    <AppxPackagedFile Include="C:\Users\null\OneDrive - ErhvervsAkademi Sjælland\Dokumenter\Prøver\2. Semester\boligadministrationssystem\MainAppWindows\MainAppWindows\bin\x86\Debug\Views\ShellPage.xbf">
       <PackagePath>Views\ShellPage.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\null\Source\Repos\boligadministrationssystem\MainAppWindows\MainAppWindows\bin\x86\Debug\Views\Login\WelcomeLoginPage.xbf">
+    <AppxPackagedFile Include="C:\Users\null\OneDrive - ErhvervsAkademi Sjælland\Dokumenter\Prøver\2. Semester\boligadministrationssystem\MainAppWindows\MainAppWindows\bin\x86\Debug\Views\Login\WelcomeLoginPage.xbf">
       <PackagePath>Views\Login\WelcomeLoginPage.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\null\Source\Repos\boligadministrationssystem\MainAppWindows\MainAppWindows\bin\x86\Debug\Views\Lejlighed\StatusIndberetningPage.xbf">
+    <AppxPackagedFile Include="C:\Users\null\OneDrive - ErhvervsAkademi Sjælland\Dokumenter\Prøver\2. Semester\boligadministrationssystem\MainAppWindows\MainAppWindows\bin\x86\Debug\Views\Lejlighed\StatusIndberetningPage.xbf">
       <PackagePath>Views\Lejlighed\StatusIndberetningPage.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.15063.0\Windows.winmd">
@@ -592,11 +592,11 @@
     <AppxPackagedFile Include="C:\Users\null\.nuget\packages\microsoft.toolkit.uwp.ui.controls\2.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\TileControl\TileControl.xaml">
       <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\TileControl\TileControl.xaml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\null\Source\Repos\boligadministrationssystem\MainAppWindows\MainAppWindows\bin\x86\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\null\OneDrive - ErhvervsAkademi Sjælland\Dokumenter\Prøver\2. Semester\boligadministrationssystem\MainAppWindows\MainAppWindows\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\null\Source\Repos\boligadministrationssystem\MainAppWindows\MainAppWindows\bin\x86\Debug\Core\MainAppWindows.exe">
+    <AppxPackagedFile Include="C:\Users\null\OneDrive - ErhvervsAkademi Sjælland\Dokumenter\Prøver\2. Semester\boligadministrationssystem\MainAppWindows\MainAppWindows\bin\x86\Debug\Core\MainAppWindows.exe">
       <PackagePath>MainAppWindows.exe</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>
