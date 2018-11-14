@@ -18,7 +18,7 @@ namespace UWP_App.Persistency
                     Del_ID = 0,
                     Status = StatusValues.Normal,
                     Lejlighed_No = 0,
-                    Beskrivelse = "I køkkenet"
+                    Beskrivelse = "Faldstammen i køkkenet"
                 },
                 new Faldstamme()
                 {
@@ -26,7 +26,7 @@ namespace UWP_App.Persistency
                     Del_ID = 0,
                     Status = StatusValues.Bad,
                     Lejlighed_No = 0,
-                    Beskrivelse = "På toiletet"
+                    Beskrivelse = "Faldstammen på toiletet"
                 },
                 new Faldstamme()
                 {
@@ -34,7 +34,37 @@ namespace UWP_App.Persistency
                     Del_ID = 1,
                     Status = StatusValues.Normal,
                     Lejlighed_No = 1,
-                    Beskrivelse = "I køkkenet"
+                    Beskrivelse = "Faldstamme i køkkenet"
+                }
+            };
+
+            return list.Where(x => x.Lejlighed_No == lejlighed.Lejlighed_No);
+        }
+
+        public IEnumerable<Vindue> GetLejlighedsVinduer(Lejlighed lejlighed)
+        {
+            List<Vindue> list = new List<Vindue>()
+            {
+                new Vindue()
+                {
+                    Vindue_ID = 0,
+                    Status = StatusValues.Normal,
+                    Lejlighed_No = 0,
+                    Beskrivelse = "Det store vindue i studen"
+                },
+                new Vindue()
+                {
+                    Vindue_ID = 1,
+                    Status = StatusValues.Bad,
+                    Lejlighed_No = 0,
+                    Beskrivelse = "Det lille vindue i stuen"
+                },
+                new Vindue()
+                {
+                    Vindue_ID = 2,
+                    Status = StatusValues.Normal,
+                    Lejlighed_No = 1,
+                    Beskrivelse = "Vinduet i køkknet"
                 }
             };
 

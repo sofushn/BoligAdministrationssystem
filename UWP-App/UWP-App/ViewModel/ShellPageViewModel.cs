@@ -42,7 +42,7 @@ namespace UWP_App.ViewModel
             // creates a NavigationLink
             // implicit converts it to a NavigationViewItem
             // adds the item to the PrimaryItems list
-            PrimaryItems.Add(new NavigationLink<MainPage>("Main Page", Symbol.Home));
+            PrimaryItems.Add(new NavigationLink<HomePage>("Main Page", Symbol.Home));
 
             // adds a seperator between the MainPage and the header
             PrimaryItems.Add(new NavigationViewItemSeparator());

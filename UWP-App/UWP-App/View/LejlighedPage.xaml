@@ -112,7 +112,7 @@
 
                     <StackPanel Grid.Row="0" Margin="20,0,20,10">
                         <TextBlock Text="Status rapporter der venter på godkendelse:" FontSize="24"/>
-                        <GridView ItemsSource="{Binding IkkeGodkendteStatusRapporter}" SelectedIndex="{Binding SelectedIndex, Mode=TwoWay}"
+                        <GridView ItemsSource="{Binding IkkeGodkendteStatusRapporter}" SelectedIndex="{Binding IkkeGodkendtSelectedIndex, Mode=TwoWay}"
                                   SelectionMode="Single" Margin="0,10,0,0">
                             <GridView.ItemTemplate>
                                 <DataTemplate>
@@ -136,7 +136,7 @@
 
                     <StackPanel Grid.Row="1" Margin="20,10,20,0">
                         <TextBlock Text="Godkente status rapporter:" FontSize="24"/>
-                        <GridView ItemsSource="{Binding GodkendteStatusRapporter}" 
+                        <GridView ItemsSource="{Binding GodkendteStatusRapporter}" SelectedIndex="{Binding GodkendtSelectedIndex}" 
                                   SelectionMode="Single" Margin="0,10,0,0">
                             <GridView.ItemTemplate>
                                 <DataTemplate>

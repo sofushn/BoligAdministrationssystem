@@ -13,7 +13,8 @@ namespace UWP_App.ViewModel
     {
         private ObservableCollection<StatusRapportBase> _statusRapporter;
         private bool _isPaneOpen;
-        private int _selectedIndex;
+        private int _ikkeGodkendtSelectedIndex;
+        private int _godkendtSelectedIndex;
         private string _newRapportNote;
         private StatusValues _newRapportStatus;
         private StatusRapportTypes _newRapportTypes;
@@ -64,10 +65,21 @@ namespace UWP_App.ViewModel
             get => _selectedStatusRapport;
             set => SetProperty(ref _selectedStatusRapport, value);
         }
-        public int SelectedIndex
+        public int IkkeGodkendtSelectedIndex
         {
-            get => _selectedIndex;
-            set => SetProperty(ref _selectedIndex, value);
+            get => _ikkeGodkendtSelectedIndex;
+            set
+            {
+                SetProperty(ref _ikkeGodkendtSelectedIndex, value);
+            }
+        }
+        public int GodkendtSelectedIndex
+        {
+            get => _godkendtSelectedIndex;
+            set
+            {
+                SetProperty(ref _godkendtSelectedIndex, value);
+            } 
         }
         public bool IsPaneOpen
         {
@@ -96,12 +108,14 @@ namespace UWP_App.ViewModel
             //TODO : Change to real persistency object when implemented
             IPersistency persistency = new TempTestData();
 
+            //Move to a class handels all user loading
             CurrentLejlighed = persistency.GetAndelshaversLejligheder().FirstOrDefault();
             _statusRapporter = new ObservableCollection<StatusRapportBase>(persistency.GetLejlighedsStatusRapporter(CurrentLejlighed));
-            CurrentLejlighed.Faldstammer = new List<Faldstamme>(persistency.GetLejlighedsFaldstammer(CurrentLejlighed));
-            // load current lejligheds vinduer...
+            CurrentLejlighed.Faldstammer = persistency.GetLejlighedsFaldstammer(CurrentLejlighed);
+            CurrentLejlighed.Vinduer = persistency.GetLejlighedsVinduer(CurrentLejlighed);
 
-            SelectedIndex = -1;
+            _ikkeGodkendtSelectedIndex = -1;
+            _godkendtSelectedIndex = -1;
         }
 
         private async void CreateStatusRapport()
