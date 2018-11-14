@@ -3,12 +3,165 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:UWP_App.View"
+    xmlns:data="using:UWP_App.Model"
+    xmlns:ViewModel="using:UWP_App.ViewModel"
+    xmlns:converter="using:UWP_App.Converter"
+    xmlns:i="using:Microsoft.Xaml.Interactivity"
+    xmlns:ic="using:Microsoft.Xaml.Interactions.Core"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    RequestedTheme="Default">
 
-    <Grid>
+    <Page.Resources>
+        <converter:BoolToColorConverter x:Key="boolToColor" />
+    </Page.Resources>
 
+    <Page.DataContext>
+        <ViewModel:LejlighedViewModel/>
+    </Page.DataContext>
+
+
+
+    <Grid Background="{ThemeResource SystemControlPageBackgroundChromeLowBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBlock
+                    Text="Address:"
+                    FontSize="20"
+                    Margin="20,20,10,20"/>
+                <TextBlock Text="{Binding CurrentLejlighed.Adresse}" Margin="0,20,20,20" FontSize="20"/>
+            </StackPanel>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto" MinWidth="100"/>
+                    <ColumnDefinition Width="5*"/>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Orientation="Vertical" Grid.Column="1" HorizontalAlignment="Center">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Størelse (m2):" Margin="0,4,10,4"/>
+                        <TextBlock Text="{Binding CurrentLejlighed.Stoerelse}" Margin="0,4" Foreground="#FF2D77D1"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Antal rum:" Margin="0,4,10,4"/>
+                        <TextBlock Text="{Binding CurrentLejlighed.Rum_Antal}" Margin="0,4" Foreground="#FF2D77D1"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Måndelig leje:" Margin="0,4,10,4"/>
+                        <TextBlock Text="{Binding CurrentLejlighed.Maandelig_Leje}" Margin="0,4" Foreground="#FF2D77D1"/>
+                    </StackPanel>
+                </StackPanel>
+
+            </Grid>
+
+
+            <Line Stroke="Gray" X2="1" Stretch="Fill" VerticalAlignment="Bottom" Margin="0,10"/>
+
+
+
+        </StackPanel>
+
+        <SplitView x:Name="createRapportPane" PanePlacement="Right" DisplayMode="Inline"
+                       IsPaneOpen="{Binding IsPaneOpen}" OpenPaneLength="350"
+                       Grid.Row="1"
+                       PaneBackground="{ThemeResource SystemControlBackgroundChromeMediumLowBrush}">
+            <!-- Pane area -->
+            <SplitView.Pane>
+                <Grid Margin="20">
+                    <StackPanel Spacing="10">
+                        <ComboBox Header="Rapport type:" Width="180"
+                                  ItemsSource="{Binding ListRapportTypes}"
+                                  SelectedItem="{Binding NewRapportType, Mode=TwoWay}"/>
+                        <ComboBox Header="Hvad er rapporten for:" ItemsSource="{Binding RapportItems}"
+                                  DisplayMemberPath="Beskrivelse" Width="180"
+                                  SelectedItem="{Binding ItemToBeRepportedOn, Mode=TwoWay}"/>
+                        <ComboBox Header="Status værdier:" Width="180"
+                                  ItemsSource="{Binding ListStatusValues}"
+                                  SelectedItem="{Binding NewRapportStatus, Mode=TwoWay}"/>
+                        <TextBox Header="Note:" PlaceholderText="Lav en beskrivelse af problemet."
+                                 TextWrapping="Wrap" AcceptsReturn="True" Height="180"
+                                 Text="{Binding NewRapportNote, Mode=TwoWay}"
+                                 ScrollViewer.VerticalScrollBarVisibility="Auto"/>
+
+                        <Button HorizontalAlignment="Center" Margin="0,30,0,0" Content="Indsend rapport" Command="{Binding CreateStatusRapportCommand}"/>
+                    </StackPanel>
+                </Grid>
+            </SplitView.Pane>
+
+            <!-- Content area -->
+            <SplitView.Content>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="7*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <StackPanel Grid.Row="0" Margin="20,0,20,10">
+                        <TextBlock Text="Status rapporter der venter på godkendelse:" FontSize="24"/>
+                        <GridView ItemsSource="{Binding IkkeGodkendteStatusRapporter}" SelectedIndex="{Binding SelectedIndex, Mode=TwoWay}"
+                                  SelectionMode="Single" Margin="0,10,0,0">
+                            <GridView.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid BorderThickness="2" BorderBrush="Red">
+                                        <StackPanel Margin="10" MaxWidth="150">
+                                            <StackPanel Orientation="Horizontal">
+                                                <TextBlock Text="{Binding Status_ID}" Grid.Column="0" Margin="0,0,10,0"/>
+                                                <TextBlock Text="{Binding Dato}" Grid.Column="1"/>
+                                            </StackPanel>
+                                            <TextBlock Text="{Binding Status}" Grid.Row="1" Grid.ColumnSpan="2"/>
+                                            <TextBlock Text="{Binding Note}" TextWrapping="WrapWholeWords"
+                                                       Grid.Row="2" Grid.ColumnSpan="2" Grid.Column="0"/>
+                                        </StackPanel>
+                                    </Grid>
+                                </DataTemplate>
+                            </GridView.ItemTemplate>
+                        </GridView>
+                    </StackPanel>
+
+                    <Line Stroke="Gray" X2="1" Stretch="Fill" VerticalAlignment="Bottom" Margin="10,0"/>
+
+                    <StackPanel Grid.Row="1" Margin="20,10,20,0">
+                        <TextBlock Text="Godkente status rapporter:" FontSize="24"/>
+                        <GridView ItemsSource="{Binding GodkendteStatusRapporter}" 
+                                  SelectionMode="Single" Margin="0,10,0,0">
+                            <GridView.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid BorderThickness="2" BorderBrush="Green">
+                                        <StackPanel Margin="10" MaxWidth="150">
+                                            <StackPanel Orientation="Horizontal">
+                                                <TextBlock Text="{Binding Status_ID}" Grid.Column="0" Margin="0,0,10,0"/>
+                                                <TextBlock Text="{Binding Dato}" Grid.Column="1"/>
+                                            </StackPanel>
+                                            <TextBlock Text="{Binding Status}" Grid.Row="1" Grid.ColumnSpan="2"/>
+                                            <TextBlock Text="{Binding Note}" TextWrapping="WrapWholeWords"
+                                                       Grid.Row="2" Grid.ColumnSpan="2" Grid.Column="0"/>
+                                        </StackPanel>
+                                    </Grid>
+                                </DataTemplate>
+                            </GridView.ItemTemplate>
+                        </GridView>
+                    </StackPanel>
+
+                </Grid>
+            </SplitView.Content>
+        </SplitView>
+
+        <CommandBar OverflowButtonVisibility="Visible" VerticalAlignment="Bottom" Grid.Row="2">
+            <AppBarToggleButton Icon="Add" Label="Opret rapport"  IsChecked="{Binding IsPaneOpen, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+        </CommandBar>
     </Grid>
 </Page>

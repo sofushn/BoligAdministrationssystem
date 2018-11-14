@@ -125,7 +125,7 @@ namespace UWP_App.ViewModel
         {
             try
             {
-                return new NavigationLink<T>(item.Content.ToString(), ((SymbolIcon) item.Icon).Symbol);
+                return new NavigationLink<T>(item.Content.ToString(), ((SymbolIcon) item.Icon).Symbol) { Page = (Type)item.Tag };
             }
             catch (Exception e)
             {

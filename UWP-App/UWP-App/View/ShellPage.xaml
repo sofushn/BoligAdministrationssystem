@@ -15,11 +15,12 @@
     </Page.DataContext>
 
     <Grid>
-        <NavigationView x:Name="navMenu" 
+        <NavigationView x:Name="navMenu"
                         Header="{Binding SelectedNavigationViewItem.Content}" 
                         MenuItemsSource="{Binding PrimaryItems}" 
                         SelectedItem="{Binding SelectedNavigationViewItem, Mode=TwoWay}" 
                         IsBackEnabled="{Binding ElementName=contentFrame, FallbackValue=False, Path=CanGoBack}">
+
             <i:Interaction.Behaviors>
                 <core:EventTriggerBehavior EventName="SelectionChanged">
                     <core:InvokeCommandAction Command="{Binding NavigationCommand}" />
@@ -32,8 +33,7 @@
                 </core:EventTriggerBehavior>
             </i:Interaction.Behaviors>
 
-
-<!--            
+            <!--            
             <NavigationView.PaneFooter>
                 <NavigationViewItem Content="User" Icon="Contact">
                 </NavigationViewItem>
