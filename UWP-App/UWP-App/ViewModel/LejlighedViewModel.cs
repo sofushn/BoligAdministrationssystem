@@ -105,11 +105,15 @@ namespace UWP_App.ViewModel
 
         public LejlighedViewModel()
         {
-            //TODO : Change to real persistency object when implemented
-            IPersistency persistency = new TempTestData();
+            //DB-IMP : Change to real persistency object when implemented
+            IRetrievePersistency persistency = new TempTestData();
 
-            //Move to a class handels all user loading
-            CurrentLejlighed = persistency.GetAndelshaversLejligheder().FirstOrDefault();
+            //Move to a class that handels all user loading/data fetching from db
+
+            // Only selectes first lejlighed even if user owns more that one
+            //TODO : Let the user select which lejlighed they want to view
+            CurrentLejlighed = CurrentUser.User.Lejligheder.FirstOrDefault();
+
             _statusRapporter = new ObservableCollection<StatusRapportBase>(persistency.GetLejlighedsStatusRapporter(CurrentLejlighed));
             CurrentLejlighed.Faldstammer = persistency.GetLejlighedsFaldstammer(CurrentLejlighed);
             CurrentLejlighed.Vinduer = persistency.GetLejlighedsVinduer(CurrentLejlighed);
@@ -123,6 +127,7 @@ namespace UWP_App.ViewModel
             IsPaneOpen = false;
             //TODO : make async handler method and call await on it
             throw new NotImplementedException("Move to a hander class");
+            // Last update _statusRapporter
         }
 
 

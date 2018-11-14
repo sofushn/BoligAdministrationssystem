@@ -8,7 +8,7 @@ namespace UWP_App.Model
         public string Navn { get; set; }
         public string EMail { get; set; }
         public string Mobil_Nummer { get; set; }
-        public List<Kontrakt> Kontrakter { get; set; }
-        public List<Lejlighed> Lejligheder { get; set; }
+        public IEnumerable<Kontrakt> Kontrakter { get; set; }
+        public IEnumerable<Lejlighed> Lejligheder { get; set; }
     }
 }

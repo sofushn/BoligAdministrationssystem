@@ -5,6 +5,8 @@ using Windows.UI.Core;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using UWP_App.Common;
+using UWP_App.Model;
+using UWP_App.Persistency;
 using UWP_App.View;
 
 namespace UWP_App
@@ -55,11 +57,16 @@ namespace UWP_App
         }
 
         // Startup
-        // Everything that needs to be loaded after the app has started and is showing the first page
+        // Everything that needs to be loaded after the app has started
         private async Task StartupAsync()
         {
-            //TODO Make it possible to login or change user
-            //CurrentUser.Initialize(new LoginHandler().Login(1));
+            //TODO : Make it possible to login or change user
+            if (!CurrentUser.IsInitialized)
+            {
+                // always login as andelshaver with ID == 0
+                //DB-IMP : change TempTestData to real persistency facade when implemented
+                CurrentUser.Initialize(0, new TempTestData());
+            }
 
             await Task.CompletedTask;
         }

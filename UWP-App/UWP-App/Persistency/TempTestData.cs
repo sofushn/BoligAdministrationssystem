@@ -6,7 +6,7 @@ using UWP_App.Model;
 
 namespace UWP_App.Persistency
 {
-    public class TempTestData : IPersistency
+    public class TempTestData : IRetrievePersistency, ICreatePersistency
     {
         public IEnumerable<Faldstamme> GetLejlighedsFaldstammer(Lejlighed lejlighed)
         {
@@ -102,22 +102,53 @@ namespace UWP_App.Persistency
             return list;
         }
 
-        public IEnumerable<Lejlighed> GetAndelshaversLejligheder()
+        public IEnumerable<Lejlighed> GetAndelshaversLejligheder(Andelshaver andelshaver)
         {
-            Lejlighed l = new Lejlighed()
+            List<Lejlighed> list =  new List<Lejlighed>()
             {
-                Lejlighed_No = 0,
-                Adresse = "Hjemmevej, 1234 Lille by, Danmark",
-                Maandelig_Leje = 5000,
-                Rum_Antal = 2,
-                Stoerelse = 120
+                new Lejlighed()
+                {
+                    Lejlighed_No = 0,
+                    Adresse = "Hjemmevej, 1234 Lille by, Danmark",
+                    Maandelig_Leje = 5000,
+                    Rum_Antal = 2,
+                    Stoerelse = 120
+                }
+
             };
-            return new List<Lejlighed>() {l};
+
+            List<Lejlighed> returnList = new List<Lejlighed>();
+            foreach (Kontrakt kontrakt in andelshaver.Kontrakter)
+            {
+                returnList.AddRange(list.Where(x => x.Lejlighed_No == kontrakt.Lejlighed_No));
+            }
+
+            return returnList;
         }
 
-        public Andelshaver GetAndelshaver()
+        public IEnumerable<Kontrakt> GetAndelshaversKontrakter(Andelshaver andelshaver)
         {
-            throw new System.NotImplementedException();
+            List<Kontrakt> list = new List<Kontrakt>()
+            {
+                new Kontrakt()
+                {
+                    Kontrakt_ID = 0,
+                    Andelshaver_ID = 0,
+                    Lejlighed_No = 0,
+                }
+            };
+
+            return list;
+        }
+
+        public Andelshaver GetAndelshaver(int andelshaverID)
+        {
+            return new Andelshaver() { Andelshaver_ID = 0 };
+        }
+
+        public void CreateStatusRapport(StatusRapportBase statusRapport)
+        {
+            throw new NotImplementedException();
         }
     }
 }
