@@ -101,6 +101,7 @@
     <Compile Include="Converter\BoolToColorConverter.cs" />
     <Compile Include="Handler\StatusRapportHandler.cs" />
     <Compile Include="Model\Andelshaver.cs" />
+    <Compile Include="Model\CurrentUser.cs" />
     <Compile Include="Model\Enums\StatusRapportTypes.cs" />
     <Compile Include="Model\Enums\StatusValues.cs" />
     <Compile Include="Model\Faldstamme.cs" />
@@ -111,7 +112,8 @@
     <Compile Include="Model\StatusRapport\StatusRapportFaldstamme.cs" />
     <Compile Include="Model\StatusRapport\StatusRapportVindue.cs" />
     <Compile Include="Model\Vindue.cs" />
-    <Compile Include="Persistency\Interface\IPersistency.cs" />
+    <Compile Include="Persistency\Interface\ICreatePersistency.cs" />
+    <Compile Include="Persistency\Interface\IRetrievePersistency.cs" />
     <Compile Include="Persistency\TempTestData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModel\LejlighedViewModel.cs" />

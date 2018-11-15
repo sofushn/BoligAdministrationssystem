@@ -109,6 +109,7 @@ namespace UWP_App.ViewModel
             Lable = lable;
             Page = typeof(T);
             Symbol = symbol;
+            
         }
 
         public static implicit operator NavigationViewItem(NavigationLink<T> link)

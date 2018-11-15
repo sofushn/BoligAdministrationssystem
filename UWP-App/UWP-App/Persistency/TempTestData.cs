@@ -2,12 +2,44 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Threading.Tasks;
 using UWP_App.Model;
 
 namespace UWP_App.Persistency
 {
     public class TempTestData : IRetrievePersistency, ICreatePersistency
     {
+        private static List<StatusRapportBase> _statusRapports;
+
+        static TempTestData()
+        {
+            _statusRapports = new List<StatusRapportBase>()
+            {
+                new StatusRapportVindue()
+                {
+                    Status_ID = 0,
+                    Status = StatusValues.Normal,
+                    Dato = DateTime.Now,
+                    Note = "Mit vindue er utæt balalallallalalallal"
+                },
+                new StatusRapportFaldstamme()
+                {
+                    Status_ID = 1,
+                    Status = StatusValues.Bad,
+                    Dato = DateTime.Now.AddDays(-2d),
+                    Note = "Der løber vand fra min faldstamme"
+                },
+                new StatusRapportFaldstamme()
+                {
+                    Status_ID = 2,
+                    Status = StatusValues.Important,
+                    Dato = DateTime.Now,
+                    Note = "Der fosser ud med vand fra min faldstamme, gulvet er helt vådt",
+                    Godkendt = true
+                }
+            };
+        }
+
         public IEnumerable<Faldstamme> GetLejlighedsFaldstammer(Lejlighed lejlighed)
         {
             List<Faldstamme> list = new List<Faldstamme>()
@@ -73,33 +105,7 @@ namespace UWP_App.Persistency
 
         public IEnumerable<StatusRapportBase> GetLejlighedsStatusRapporter(Lejlighed lejlighed)
         {
-            List<StatusRapportBase> list = new List<StatusRapportBase>()
-            {
-                new StatusRapportVindue()
-                {
-                    Status_ID = 0,
-                    Status = StatusValues.Normal,
-                    Dato = DateTime.Now,
-                    Note = "Mit vindue er utæt balalallallalalallal"
-                },
-                new StatusRapportFaldstamme()
-                {
-                    Status_ID = 1,
-                    Status = StatusValues.Bad,
-                    Dato = DateTime.Now.AddDays(-2d),
-                    Note = "Der løber vand fra min faldstamme"
-                },
-                new StatusRapportFaldstamme()
-                {
-                    Status_ID = 2,
-                    Status = StatusValues.Important,
-                    Dato = DateTime.Now,
-                    Note = "Der fosser ud med vand fra min faldstamme, gulvet er helt vådt",
-                    Godkendt = true
-                }
-            };
-
-            return list;
+            return _statusRapports;
         }
 
         public IEnumerable<Lejlighed> GetAndelshaversLejligheder(Andelshaver andelshaver)
@@ -148,7 +154,10 @@ namespace UWP_App.Persistency
 
         public void CreateStatusRapport(StatusRapportBase statusRapport)
         {
-            throw new NotImplementedException();
+            // Simulates the DB generating a id
+            statusRapport.Status_ID = _statusRapports.Count;
+            // Adds to db
+            _statusRapports.Add(statusRapport);
         }
     }
 }

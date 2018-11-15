@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using UWP_App.Common;
+using UWP_App.Handler;
 using UWP_App.Model;
 using UWP_App.Persistency;
 
@@ -27,8 +29,31 @@ namespace UWP_App.ViewModel
 
 
         public Lejlighed CurrentLejlighed { get; set; }
-        public ObservableCollection<StatusRapportBase> GodkendteStatusRapporter { get => new ObservableCollection<StatusRapportBase>(_statusRapporter.Where(x => x.Godkendt)); }
-        public ObservableCollection<StatusRapportBase> IkkeGodkendteStatusRapporter { get => new ObservableCollection<StatusRapportBase>(_statusRapporter.Where(x => !x.Godkendt)); }
+        public IEnumerable<StatusRapportBase> GodkendteStatusRapporter
+        {
+            get
+            {
+                return StatusRapporter.Where(x => x.Godkendt);
+            }
+        }
+        public IEnumerable<StatusRapportBase> IkkeGodkendteStatusRapporter
+        {
+            get
+            {
+                return StatusRapporter.Where(x => !x.Godkendt);
+            }
+        }
+
+        private ObservableCollection<StatusRapportBase> StatusRapporter
+        {
+            get => _statusRapporter;
+            set
+            {
+                _statusRapporter = value;
+                OnPropertyChanged("GodkendteStatusRapporter");
+                OnPropertyChanged("IkkeGodkendteStatusRapporter");
+            }
+        }
 
         #region Properties for making a new report
         public string NewRapportNote
@@ -105,31 +130,36 @@ namespace UWP_App.ViewModel
 
         public LejlighedViewModel()
         {
-            //DB-IMP : Change to real persistency object when implemented
-            IRetrievePersistency persistency = new TempTestData();
-
-            //Move to a class that handels all user loading/data fetching from db
-
             // Only selectes first lejlighed even if user owns more that one
             //TODO : Let the user select which lejlighed they want to view
             CurrentLejlighed = CurrentUser.User.Lejligheder.FirstOrDefault();
-
-            _statusRapporter = new ObservableCollection<StatusRapportBase>(persistency.GetLejlighedsStatusRapporter(CurrentLejlighed));
-            CurrentLejlighed.Faldstammer = persistency.GetLejlighedsFaldstammer(CurrentLejlighed);
-            CurrentLejlighed.Vinduer = persistency.GetLejlighedsVinduer(CurrentLejlighed);
+            UpdatePageData();
 
             _ikkeGodkendtSelectedIndex = -1;
             _godkendtSelectedIndex = -1;
         }
 
-        private async void CreateStatusRapport()
+        private void CreateStatusRapport()
         {
+            //TODO : make method and call await on it
+            StatusRapportHandler.CreateRapport(NewRapportNote, NewRapportStatus, NewRapportType, ItemToBeRepportedOn);
             IsPaneOpen = false;
-            //TODO : make async handler method and call await on it
-            throw new NotImplementedException("Move to a hander class");
-            // Last update _statusRapporter
+
+            UpdatePageData();
         }
 
+        private void UpdatePageData()
+        {
+            IRetrievePersistency persistency = new TempTestData();
+            //DB-IMP : Change to real persistency object when implemented
+
+
+            //Move to a class that handels all user loading/data fetching from db
+            CurrentLejlighed.Faldstammer = persistency.GetLejlighedsFaldstammer(CurrentLejlighed);
+            CurrentLejlighed.Vinduer = persistency.GetLejlighedsVinduer(CurrentLejlighed);
+
+            StatusRapporter = new ObservableCollection<StatusRapportBase>(persistency.GetLejlighedsStatusRapporter(CurrentLejlighed));
+        }
 
         private void StatusRapportTypeChanged(StatusRapportTypes value)
         {

@@ -2,7 +2,7 @@
 {
     public class StatusRapportVindue : StatusRapportBase
     {
-        public int Vindue_ID { get; set; }
+        public Vindue Vindue { get; set; }
         public override StatusRapportTypes RapportType { get => StatusRapportTypes.Vindue; }
     }
 }

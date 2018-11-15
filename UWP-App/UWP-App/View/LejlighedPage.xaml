@@ -16,6 +16,19 @@
 
     <Page.Resources>
         <converter:BoolToColorConverter x:Key="boolToColor" />
+        <DataTemplate x:Key="gridViewTemplate">
+            <Grid BorderThickness="2" BorderBrush="{Binding Godkendt, Converter={StaticResource boolToColor}}">
+                <StackPanel Margin="10" MaxWidth="150">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding Status_ID}" Grid.Column="0" Margin="0,0,10,0"/>
+                        <TextBlock Text="{Binding Dato}" Grid.Column="1"/>
+                    </StackPanel>
+                    <TextBlock Text="{Binding Status}" Grid.Row="1" Grid.ColumnSpan="2"/>
+                    <TextBlock Text="{Binding Note}" TextWrapping="WrapWholeWords"
+                               Grid.Row="2" Grid.ColumnSpan="2" Grid.Column="0"/>
+                </StackPanel>
+            </Grid>
+        </DataTemplate>
     </Page.Resources>
 
     <Page.DataContext>
@@ -72,10 +85,10 @@
 
         </StackPanel>
 
-        <SplitView x:Name="createRapportPane" PanePlacement="Right" DisplayMode="Inline"
-                       IsPaneOpen="{Binding IsPaneOpen}" OpenPaneLength="350"
+        <SplitView x:Name="createRapportPane" PanePlacement="Right" DisplayMode="Overlay"
+                       IsPaneOpen="{Binding IsPaneOpen, Mode=TwoWay}" OpenPaneLength="350"
                        Grid.Row="1"
-                       PaneBackground="{ThemeResource SystemControlBackgroundChromeMediumLowBrush}">
+                       PaneBackground="{ThemeResource SystemControlAcrylicElementMediumHighBrush}">
             <!-- Pane area -->
             <SplitView.Pane>
                 <Grid Margin="20">
@@ -112,50 +125,17 @@
 
                     <StackPanel Grid.Row="0" Margin="20,0,20,10">
                         <TextBlock Text="Status rapporter der venter på godkendelse:" FontSize="24"/>
-                        <GridView ItemsSource="{Binding IkkeGodkendteStatusRapporter}" SelectedIndex="{Binding IkkeGodkendtSelectedIndex, Mode=TwoWay}"
-                                  SelectionMode="Single" Margin="0,10,0,0">
-                            <GridView.ItemTemplate>
-                                <DataTemplate>
-                                    <Grid BorderThickness="2" BorderBrush="Red">
-                                        <StackPanel Margin="10" MaxWidth="150">
-                                            <StackPanel Orientation="Horizontal">
-                                                <TextBlock Text="{Binding Status_ID}" Grid.Column="0" Margin="0,0,10,0"/>
-                                                <TextBlock Text="{Binding Dato}" Grid.Column="1"/>
-                                            </StackPanel>
-                                            <TextBlock Text="{Binding Status}" Grid.Row="1" Grid.ColumnSpan="2"/>
-                                            <TextBlock Text="{Binding Note}" TextWrapping="WrapWholeWords"
-                                                       Grid.Row="2" Grid.ColumnSpan="2" Grid.Column="0"/>
-                                        </StackPanel>
-                                    </Grid>
-                                </DataTemplate>
-                            </GridView.ItemTemplate>
-                        </GridView>
+                        <GridView ItemsSource="{Binding IkkeGodkendteStatusRapporter}" SelectedValue="{Binding SelectedStatusRapport, Mode=TwoWay}"
+                                  SelectionMode="Single" Margin="0,10,0,0" ItemTemplate="{StaticResource gridViewTemplate}"/>
                     </StackPanel>
 
                     <Line Stroke="Gray" X2="1" Stretch="Fill" VerticalAlignment="Bottom" Margin="10,0"/>
 
                     <StackPanel Grid.Row="1" Margin="20,10,20,0">
                         <TextBlock Text="Godkente status rapporter:" FontSize="24"/>
-                        <GridView ItemsSource="{Binding GodkendteStatusRapporter}" SelectedIndex="{Binding GodkendtSelectedIndex}" 
-                                  SelectionMode="Single" Margin="0,10,0,0">
-                            <GridView.ItemTemplate>
-                                <DataTemplate>
-                                    <Grid BorderThickness="2" BorderBrush="Green">
-                                        <StackPanel Margin="10" MaxWidth="150">
-                                            <StackPanel Orientation="Horizontal">
-                                                <TextBlock Text="{Binding Status_ID}" Grid.Column="0" Margin="0,0,10,0"/>
-                                                <TextBlock Text="{Binding Dato}" Grid.Column="1"/>
-                                            </StackPanel>
-                                            <TextBlock Text="{Binding Status}" Grid.Row="1" Grid.ColumnSpan="2"/>
-                                            <TextBlock Text="{Binding Note}" TextWrapping="WrapWholeWords"
-                                                       Grid.Row="2" Grid.ColumnSpan="2" Grid.Column="0"/>
-                                        </StackPanel>
-                                    </Grid>
-                                </DataTemplate>
-                            </GridView.ItemTemplate>
-                        </GridView>
+                        <GridView ItemsSource="{Binding GodkendteStatusRapporter}" SelectedValue="{Binding SelectedStatusRapport, Mode=TwoWay}" 
+                                  SelectionMode="Single" Margin="0,10,0,0" ItemTemplate="{StaticResource gridViewTemplate}"/>
                     </StackPanel>
-
                 </Grid>
             </SplitView.Content>
         </SplitView>
