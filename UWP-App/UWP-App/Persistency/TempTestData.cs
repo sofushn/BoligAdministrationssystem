@@ -103,8 +103,9 @@ namespace UWP_App.Persistency
             return list.Where(x => x.Lejlighed_No == lejlighed.Lejlighed_No);
         }
 
-        public IEnumerable<StatusRapportBase> GetLejlighedsStatusRapporter(Lejlighed lejlighed)
+        public async Task<IEnumerable<StatusRapportBase>> GetLejlighedsStatusRapporterAsync(Lejlighed lejlighed)
         {
+            await Task.Yield();
             return _statusRapports;
         }
 

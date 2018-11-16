@@ -8,7 +8,7 @@ namespace UWP_App.Persistency
     {
         IEnumerable<Faldstamme> GetLejlighedsFaldstammer(Lejlighed lejlighed);
         IEnumerable<Vindue> GetLejlighedsVinduer(Lejlighed lejlighed);
-        IEnumerable<StatusRapportBase> GetLejlighedsStatusRapporter(Lejlighed lejlighed);
+        Task<IEnumerable<StatusRapportBase>> GetLejlighedsStatusRapporterAsync(Lejlighed lejlighed);
         IEnumerable<Lejlighed> GetAndelshaversLejligheder(Andelshaver andelshaver);
         IEnumerable<Kontrakt> GetAndelshaversKontrakter(Andelshaver andelshaver);
         Andelshaver GetAndelshaver(int andelshaverID);

@@ -35,8 +35,6 @@
         <ViewModel:LejlighedViewModel/>
     </Page.DataContext>
 
-
-
     <Grid Background="{ThemeResource SystemControlPageBackgroundChromeLowBrush}">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>

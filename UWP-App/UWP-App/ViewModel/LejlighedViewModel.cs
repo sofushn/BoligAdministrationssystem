@@ -1,22 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Input;
 using UWP_App.Common;
 using UWP_App.Handler;
 using UWP_App.Model;
-using UWP_App.Persistency;
 
 namespace UWP_App.ViewModel
 {
     public class LejlighedViewModel : ObservableBase
     {
-        private ObservableCollection<StatusRapportBase> _statusRapporter;
+        private IEnumerable<StatusRapportBase> _statusRapporter;
         private bool _isPaneOpen;
-        private int _ikkeGodkendtSelectedIndex;
-        private int _godkendtSelectedIndex;
         private string _newRapportNote;
         private StatusValues _newRapportStatus;
         private StatusRapportTypes _newRapportTypes;
@@ -26,9 +21,11 @@ namespace UWP_App.ViewModel
         private IEnumerable<StatusRapportTypes> _listRapportValues;
         private IEnumerable<ICanBeReportedOn> _rapportItems;
         private StatusRapportBase _selectedStatusRapport;
+        private StatusRapportHandler _rapportHandler;
 
 
         public Lejlighed CurrentLejlighed { get; set; }
+
         public IEnumerable<StatusRapportBase> GodkendteStatusRapporter
         {
             get
@@ -44,7 +41,7 @@ namespace UWP_App.ViewModel
             }
         }
 
-        private ObservableCollection<StatusRapportBase> StatusRapporter
+        private IEnumerable<StatusRapportBase> StatusRapporter
         {
             get => _statusRapporter;
             set
@@ -90,22 +87,6 @@ namespace UWP_App.ViewModel
             get => _selectedStatusRapport;
             set => SetProperty(ref _selectedStatusRapport, value);
         }
-        public int IkkeGodkendtSelectedIndex
-        {
-            get => _ikkeGodkendtSelectedIndex;
-            set
-            {
-                SetProperty(ref _ikkeGodkendtSelectedIndex, value);
-            }
-        }
-        public int GodkendtSelectedIndex
-        {
-            get => _godkendtSelectedIndex;
-            set
-            {
-                SetProperty(ref _godkendtSelectedIndex, value);
-            } 
-        }
         public bool IsPaneOpen
         {
             get => _isPaneOpen;
@@ -130,35 +111,27 @@ namespace UWP_App.ViewModel
 
         public LejlighedViewModel()
         {
+            InitializeAsync();
+        }
+
+        private async void InitializeAsync()
+        {
+            _rapportHandler = new StatusRapportHandler();
+
             // Only selectes first lejlighed even if user owns more that one
             //TODO : Let the user select which lejlighed they want to view
             CurrentLejlighed = CurrentUser.User.Lejligheder.FirstOrDefault();
-            UpdatePageData();
 
-            _ikkeGodkendtSelectedIndex = -1;
-            _godkendtSelectedIndex = -1;
+            StatusRapporter = await _rapportHandler.GetLejlighedsRapporter(CurrentLejlighed);
         }
 
-        private void CreateStatusRapport()
+        private async void CreateStatusRapport()
         {
-            //TODO : make method and call await on it
-            StatusRapportHandler.CreateRapport(NewRapportNote, NewRapportStatus, NewRapportType, ItemToBeRepportedOn);
+            await _rapportHandler.CreateRapportAsync(NewRapportNote, NewRapportStatus, NewRapportType, ItemToBeRepportedOn);
             IsPaneOpen = false;
 
-            UpdatePageData();
-        }
-
-        private void UpdatePageData()
-        {
-            IRetrievePersistency persistency = new TempTestData();
-            //DB-IMP : Change to real persistency object when implemented
-
-
-            //Move to a class that handels all user loading/data fetching from db
-            CurrentLejlighed.Faldstammer = persistency.GetLejlighedsFaldstammer(CurrentLejlighed);
-            CurrentLejlighed.Vinduer = persistency.GetLejlighedsVinduer(CurrentLejlighed);
-
-            StatusRapporter = new ObservableCollection<StatusRapportBase>(persistency.GetLejlighedsStatusRapporter(CurrentLejlighed));
+            //TODO : Make async
+            StatusRapporter = await _rapportHandler.GetLejlighedsRapporter(CurrentLejlighed);
         }
 
         private void StatusRapportTypeChanged(StatusRapportTypes value)

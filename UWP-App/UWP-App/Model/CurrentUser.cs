@@ -12,7 +12,7 @@ namespace UWP_App.Model
             {
                 if (!IsInitialized)
                 {
-                    throw new Exception("User is not initialized. CurrentUser.Initialize() must be called first.");
+                    throw new Exception("User is not initialized. CurrentUser.InitializeAsync() must be called first.");
                 }
                 return _user;
             }
@@ -32,6 +32,14 @@ namespace UWP_App.Model
             _user.Kontrakter = retriever.GetAndelshaversKontrakter(_user);
             // Gets users lejligheder
             _user.Lejligheder = retriever.GetAndelshaversLejligheder(_user);
+
+            // Gets faldstammer and vinduer for each lejlighed
+            foreach (Lejlighed lejlighed in _user.Lejligheder)
+            {
+                //Move to a class that handels all user loading/data fetching from db
+                lejlighed.Faldstammer = retriever.GetLejlighedsFaldstammer(lejlighed);
+                lejlighed.Vinduer = retriever.GetLejlighedsVinduer(lejlighed);
+            }
 
             IsInitialized = true;
         }

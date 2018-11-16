@@ -33,7 +33,7 @@ namespace UWP_App
 
         public async Task ActivateAsync(LaunchActivatedEventArgs activationArgs)
         {
-            // Initialize things like registering background task before the app is loaded
+            // InitializeAsync things like registering background task before the app is loaded
             await InitializeAsync();
 
             // Do not repeat app initialization when the Window already has content,
@@ -71,7 +71,7 @@ namespace UWP_App
             await Task.CompletedTask;
         }
 
-        // Initialize
+        // InitializeAsync
         // Anything that needs to be done before anything else.
         private async Task InitializeAsync()
         {
