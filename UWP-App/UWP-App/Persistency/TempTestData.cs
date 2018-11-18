@@ -40,7 +40,7 @@ namespace UWP_App.Persistency
             };
         }
 
-        public IEnumerable<Faldstamme> GetLejlighedsFaldstammer(Lejlighed lejlighed)
+        public async Task<IEnumerable<Faldstamme>> GetLejlighedsFaldstammerAsync(Lejlighed lejlighed)
         {
             List<Faldstamme> list = new List<Faldstamme>()
             {
@@ -73,7 +73,7 @@ namespace UWP_App.Persistency
             return list.Where(x => x.Lejlighed_No == lejlighed.Lejlighed_No);
         }
 
-        public IEnumerable<Vindue> GetLejlighedsVinduer(Lejlighed lejlighed)
+        public async Task<IEnumerable<Vindue>> GetLejlighedsVinduerAsync(Lejlighed lejlighed)
         {
             List<Vindue> list = new List<Vindue>()
             {
@@ -109,7 +109,7 @@ namespace UWP_App.Persistency
             return _statusRapports;
         }
 
-        public IEnumerable<Lejlighed> GetAndelshaversLejligheder(Andelshaver andelshaver)
+        public async Task<IEnumerable<Lejlighed>> GetAndelshaversLejlighederAsync(Andelshaver andelshaver)
         {
             List<Lejlighed> list =  new List<Lejlighed>()
             {
@@ -133,7 +133,7 @@ namespace UWP_App.Persistency
             return returnList;
         }
 
-        public IEnumerable<Kontrakt> GetAndelshaversKontrakter(Andelshaver andelshaver)
+        public async Task<IEnumerable<Kontrakt>> GetAndelshaversKontrakterAsync(Andelshaver andelshaver)
         {
             List<Kontrakt> list = new List<Kontrakt>()
             {
@@ -148,7 +148,7 @@ namespace UWP_App.Persistency
             return list;
         }
 
-        public Andelshaver GetAndelshaver(int andelshaverID)
+        public async Task<Andelshaver> GetAndelshaverAsync(int andelshaverID)
         {
             return new Andelshaver() { Andelshaver_ID = 0 };
         }

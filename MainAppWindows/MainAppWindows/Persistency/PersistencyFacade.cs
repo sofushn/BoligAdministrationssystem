@@ -10,7 +10,7 @@ using Newtonsoft.Json;
 
 namespace MainAppWindows.Persistency
 {
-    static public class PersistencyFacade
+    public static class PersistencyFacade
     {
         //Get's HttpClient
         private static HttpClient GetClient()

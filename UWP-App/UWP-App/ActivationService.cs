@@ -65,7 +65,7 @@ namespace UWP_App
             {
                 // always login as andelshaver with ID == 0
                 //DB-IMP : change TempTestData to real persistency facade when implemented
-                CurrentUser.Initialize(0, new TempTestData());
+                await CurrentUser.Initialize(0, new TempTestData());
             }
 
             await Task.CompletedTask;

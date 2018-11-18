@@ -6,12 +6,12 @@ namespace UWP_App.Persistency
 {
     public interface IRetrievePersistency
     {
-        IEnumerable<Faldstamme> GetLejlighedsFaldstammer(Lejlighed lejlighed);
-        IEnumerable<Vindue> GetLejlighedsVinduer(Lejlighed lejlighed);
+        Task<IEnumerable<Faldstamme>> GetLejlighedsFaldstammerAsync(Lejlighed lejlighed);
+        Task<IEnumerable<Vindue>> GetLejlighedsVinduerAsync(Lejlighed lejlighed);
         Task<IEnumerable<StatusRapportBase>> GetLejlighedsStatusRapporterAsync(Lejlighed lejlighed);
-        IEnumerable<Lejlighed> GetAndelshaversLejligheder(Andelshaver andelshaver);
-        IEnumerable<Kontrakt> GetAndelshaversKontrakter(Andelshaver andelshaver);
-        Andelshaver GetAndelshaver(int andelshaverID);
+        Task<IEnumerable<Lejlighed>> GetAndelshaversLejlighederAsync(Andelshaver andelshaver);
+        Task<IEnumerable<Kontrakt>> GetAndelshaversKontrakterAsync(Andelshaver andelshaver);
+        Task<Andelshaver> GetAndelshaverAsync(int andelshaverID);
 
     }
 }

@@ -21231,11 +21231,11 @@
   },
   "libraries": {
     "Microsoft.AspNet.WebApi.Client/5.2.3": {
-      "sha512": "w5w8GVLMmo+JzizmcuV01tgYn2OsaVhxGAO0ryKXkO5sob6EVjzcoJv8NHL3Xm98vywSh7kRgeLqbA/lxZuTXg==",
+      "sha512": "3kiI8peSXbXHDDrRuo+QaX0iCEVRe0nvn2dBDRw656uPX32UalbBlSIDUDlJxu05eau4tnuhsikiUuugvvoUoQ==",
       "type": "package",
       "path": "microsoft.aspnet.webapi.client/5.2.3",
       "files": [
-        ".signature.p7s",
+        ".nupkg.metadata",
         "lib/net45/System.Net.Http.Formatting.dll",
         "lib/net45/System.Net.Http.Formatting.xml",
         "lib/portable-wp8+netcore45+net45+wp81+wpa81/System.Net.Http.Formatting.dll",
@@ -21486,11 +21486,12 @@
       ]
     },
     "Microsoft.Net.Native.Compiler/1.7.0": {
-      "sha512": "0Ra/EIrzYAUraHo6ukangqCC6tsEwYGJYbct7TCSbJlWLHRN4WRkUrOis4tDmMzh+NfGpBEanWcbDUCUoaGeBw==",
+      "sha512": "g46kdqDNrrVx3CiUoSe2QDkUPi/hsncwGK2k0jti5e6PZkiUWlplhkjGHS/Xrp4dx6+KhC3tuUtStHaNX7emMQ==",
       "type": "package",
       "path": "microsoft.net.native.compiler/1.7.0",
+      "hasTools": true,
       "files": [
-        ".signature.p7s",
+        ".nupkg.metadata",
         "build/Microsoft.Net.Native.Compiler.props",
         "build/Microsoft.Net.Native.Compiler.targets",
         "microsoft.net.native.compiler.1.7.0.nupkg.sha512",
@@ -22385,11 +22386,12 @@
       ]
     },
     "Microsoft.Net.Native.SharedLibrary-arm/1.7.0": {
-      "sha512": "6uJxotTssbkPAhg6mHxiiY2URkR+0TaMW8ku8WKtdXPI6CTJj+xXlCsiU8Ewh14sKcQMNTIhGfJ8ZBRU2EN+Xw==",
+      "sha512": "eI4KNNMOpgpBkdXHFgmXD2l5gNdJJOV+ntN1Fwwnm93Rr7pmD8MGssJpI7wo7+uieaFIfAZ2waZjEnRR4Uu90A==",
       "type": "package",
       "path": "microsoft.net.native.sharedlibrary-arm/1.7.0",
+      "hasTools": true,
       "files": [
-        ".signature.p7s",
+        ".nupkg.metadata",
         "build/Microsoft.Net.Native.SharedLibrary-arm.props",
         "build/Microsoft.Net.Native.SharedLibrary-arm.targets",
         "microsoft.net.native.sharedlibrary-arm.1.7.0.nupkg.sha512",
@@ -22784,11 +22786,12 @@
       ]
     },
     "Microsoft.Net.Native.SharedLibrary-x64/1.7.0": {
-      "sha512": "1ioXY3CfROw1GsviGsU5Wcw7n+sr8qCtrgiWiAAC3yYlHyxmieq+aPRvnskRGsS6Tx9kzqGLBNsakRNr0tAWWA==",
+      "sha512": "3nrUuvayvlOdmx7yzUBu2PzKeQmZ0mwqhMfarOzt6X1tKjIrOONCFqH148rP7TgQDJBfKVSShB1f+BedF69emw==",
       "type": "package",
       "path": "microsoft.net.native.sharedlibrary-x64/1.7.0",
+      "hasTools": true,
       "files": [
-        ".signature.p7s",
+        ".nupkg.metadata",
         "build/Microsoft.Net.Native.SharedLibrary-x64.props",
         "build/Microsoft.Net.Native.SharedLibrary-x64.targets",
         "microsoft.net.native.sharedlibrary-x64.1.7.0.nupkg.sha512",
@@ -23183,11 +23186,12 @@
       ]
     },
     "Microsoft.Net.Native.SharedLibrary-x86/1.7.0": {
-      "sha512": "XPfQE+3Jxu24ac/oPR0FGsDFEcgF9oHk+ioALY9RAQyFLVo2Vmwm7pl+V4zqvidgYvV+7Pg+hEr5DORxDA/mRA==",
+      "sha512": "nC682cBwXA/ITw1BKnPxMBp93uHHFPmG/X9P+mQt1yCJBXnEcNi7XzzOROmqMuNwwtk5ci/cQE4HQDytn3O39g==",
       "type": "package",
       "path": "microsoft.net.native.sharedlibrary-x86/1.7.0",
+      "hasTools": true,
       "files": [
-        ".signature.p7s",
+        ".nupkg.metadata",
         "build/Microsoft.Net.Native.SharedLibrary-x86.props",
         "build/Microsoft.Net.Native.SharedLibrary-x86.targets",
         "microsoft.net.native.sharedlibrary-x86.1.7.0.nupkg.sha512",
@@ -23725,11 +23729,11 @@
       ]
     },
     "Microsoft.NETCore.UniversalWindowsPlatform/5.4.0": {
-      "sha512": "8UIOF4ViKA/sOj6nqY262ncrATYDi/qm/aw3UR5SFjajCfAoTnpdFL21A06ov4jo37SfvymWfZetbMdE/7aLqQ==",
+      "sha512": "n4RuBnnZXGZbpXJb49CuZxc6Yu8WeRTzkg1dutyT8a4PczoST7uRVZpH3bRAOa6+dpulzP0qUH60+xPGxmzsWA==",
       "type": "package",
       "path": "microsoft.netcore.universalwindowsplatform/5.4.0",
       "files": [
-        ".signature.p7s",
+        ".nupkg.metadata",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "microsoft.netcore.universalwindowsplatform.5.4.0.nupkg.sha512",
@@ -23921,11 +23925,11 @@
       ]
     },
     "Microsoft.Xaml.Behaviors.Uwp.Managed/2.0.0": {
-      "sha512": "NfonpGLbG+cS0+HIDLTydIjehE7ygfWRYi1bzLbrt9Su+aTfm3TlhERUowW1IAfqz3S4VunMSmVd6Z+H7ASzLA==",
+      "sha512": "LfzU68PVP33nqsuSlO5xAYuoI/itVKz4VVJSIunrS7iqqxE3sy0Q+VvtoYnFcBAoGnY83ZVn8Mnc9HYqOBiPmg==",
       "type": "package",
       "path": "microsoft.xaml.behaviors.uwp.managed/2.0.0",
       "files": [
-        ".signature.p7s",
+        ".nupkg.metadata",
         "lib/uap10.0/Design/Microsoft.Xaml.Interactions.Design.dll",
         "lib/uap10.0/Design/Microsoft.Xaml.Interactivity.Design.dll",
         "lib/uap10.0/Microsoft.Xaml.Interactions.dll",
@@ -23950,11 +23954,12 @@
       ]
     },
     "Newtonsoft.Json/10.0.3": {
-      "sha512": "MoATFm6YJyk5OdqDdxDWfKe5dkY3Cygu0wrpKPH/LbWtMmSuD/3G/JIInt9sIJN7hKQOFYCIb2UjLc2vO5byQQ==",
+      "sha512": "wBM7i7i3U2WX0ecor4zdVGvgrwFUjuigBoHKiL+nH39fCOpCPjBY3RDqJM32edvdyTAVdjzlccHsg41+/+zpSA==",
       "type": "package",
       "path": "newtonsoft.json/10.0.3",
+      "hasTools": true,
       "files": [
-        ".signature.p7s",
+        ".nupkg.metadata",
         "LICENSE.md",
         "lib/net20/Newtonsoft.Json.dll",
         "lib/net20/Newtonsoft.Json.xml",
@@ -24412,11 +24417,11 @@
       ]
     },
     "runtime.aot.System.Collections/4.3.0": {
-      "sha512": "6TyKj2FNl4YF1uihFPpF4NAsxtZUL+LBNZ23/bLt6v/Z2WC13zNZn7CLsxHrDk+zOMc9JZTjhdiNuLADm/stMQ==",
+      "sha512": "oIRYUjjkmxyxtbdyo2uslKneprTYyfu3exJnG2g2kfNK9I/SkgtZ3Ayynlr93aaasZs5PNvYfvHpZW/3QwQg4Q==",
       "type": "package",
       "path": "runtime.aot.system.collections/4.3.0",
       "files": [
-        ".signature.p7s",
+        ".nupkg.metadata",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "ref/netstandard/_._",
@@ -24426,11 +24431,11 @@
       ]
     },
     "runtime.aot.System.Diagnostics.Tools/4.3.0": {
-      "sha512": "yDcjAnqHKP5ACAkL95s1BkeqIvGv4uM8BTxPldfeEsOzuDTA/k+KViNeAqlFCIHgNUiMFo+epunJGNWuvu2xcQ==",
+      "sha512": "Sry/JfiffR1IBLanHobuD+Iaf1aeNKCrmmB7ycHREnMwxDBexYaXQ0cHoxlApYze5EYKG/XXWHWFYEx3Ep2xgA==",
       "type": "package",
       "path": "runtime.aot.system.diagnostics.tools/4.3.0",
       "files": [
-        ".signature.p7s",
+        ".nupkg.metadata",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "ref/netstandard/_._",
@@ -24440,11 +24445,11 @@
       ]
     },
     "runtime.aot.System.Diagnostics.Tracing/4.3.0": {
-      "sha512": "v75CR9/Ag6xdRyuf68W0NMVbi2Zj77zVnt7rRXLP0/nZ1Twla2hH9AlpOZwpLGycAF5YhXuKf6g/kEfzxxU6aw==",
+      "sha512": "N5oWCovFjd/RQbiWBn3KTPCfX5mxj7cAOPSnNmm1ChyPcpiHy+WPEZt1f/Z8yoegEStUkC2Ukh+2mxM9Hpbv2w==",
       "type": "package",
       "path": "runtime.aot.system.diagnostics.tracing/4.3.0",
       "files": [
-        ".signature.p7s",
+        ".nupkg.metadata",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "ref/netstandard/_._",
@@ -24454,11 +24459,11 @@
       ]
     },
     "runtime.aot.System.Globalization/4.3.0": {
-      "sha512": "PwMvSuF8IQcfAUL2bGzHZZ9sNCjTV5A+8+pQjQDZPJnUtEMI+y6e0QGdSoMZElsHr5cw4xnTyOUw4nshaHEHtA==",
+      "sha512": "JGVbV0rYZGFq44g2wd1pmm/CfcxiqyjwclO9WTzRcUT+SJvj097u1DoaXt/epyT5lOTkbOkEBqgl9hZlKvMf9g==",
       "type": "package",
       "path": "runtime.aot.system.globalization/4.3.0",
       "files": [
-        ".signature.p7s",
+        ".nupkg.metadata",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "ref/netstandard/_._",
@@ -24468,11 +24473,11 @@
       ]
     },
     "runtime.aot.System.Globalization.Calendars/4.3.0": {
-      "sha512": "LYy+xpQQKPC0bZVGCovLy0Vijr5+pjytTL50lYhqyeUWqhNwcX0KK3vBkWdT+bMuj3u/4dYffotQkbhH4NK3xg==",
+      "sha512": "HSiIdDAwkvlGy8MYdI4MLcks+kyYeAWMHoqMmFsXlEMypaYG/Yf8iYLdyzNuJcrnCXE31wEChsfgTEyo0AG7Ew==",
       "type": "package",
       "path": "runtime.aot.system.globalization.calendars/4.3.0",
       "files": [
-        ".signature.p7s",
+        ".nupkg.metadata",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "ref/netstandard/_._",
@@ -24482,11 +24487,11 @@
       ]
     },
     "runtime.aot.System.IO/4.3.0": {
-      "sha512": "ZQ0HJJw101/xJtdhL7aCNob/bBbSZ4inpy1F8ydP9MY1bcGWxBv7L0kBqnIBEO4ZNWJlc95D4rLhGYPCfSrWzQ==",
+      "sha512": "Hh4Acaw1LDirS2SRU3H8vjcdQDfWbJzP/6TacuIrmkzBvnmPMV0npB7BvZ3ODa2uyqdynrXx7/M60ufqrrVz/g==",
       "type": "package",
       "path": "runtime.aot.system.io/4.3.0",
       "files": [
-        ".signature.p7s",
+        ".nupkg.metadata",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "ref/netstandard/_._",
@@ -24497,11 +24502,11 @@
       ]
     },
     "runtime.aot.System.Reflection/4.3.0": {
-      "sha512": "A7G6G7e9MrYw1Kt7xOh7idSEnzJQTd7ISGB7bpmlr7i2i/v6CbAspv8DZaqHOKcyVKsWPaUeN/RsCZzsXN+i8w==",
+      "sha512": "RtPByBmixEVC003nTtg9rGk+hogh8u3Tjd2Ap9WtYchddErK+EfOWhWEWSNfrlfHSep0fPZyjLXye+bdDqeqyQ==",
       "type": "package",
       "path": "runtime.aot.system.reflection/4.3.0",
       "files": [
-        ".signature.p7s",
+        ".nupkg.metadata",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "ref/netstandard/_._",
@@ -24511,11 +24516,11 @@
       ]
     },
     "runtime.aot.System.Reflection.Extensions/4.3.0": {
-      "sha512": "I+Ru7rFMtpIbqtPvkY8+uJrJBHrTiPNQYhtc9dm/Cz9dnCaQlltTE0olQEPL0ITRrM1M+Yk/zTPpASbbF0FsdA==",
+      "sha512": "d2g/03MJAxr3c/mIlIwZghxfK/BBfofn+FPni7K9ec7YfZp1yXCWfs/GijOmVAE55UBkzeZlfEbEuuA5ElLPlg==",
       "type": "package",
       "path": "runtime.aot.system.reflection.extensions/4.3.0",
       "files": [
-        ".signature.p7s",
+        ".nupkg.metadata",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "ref/netstandard/_._",
@@ -24525,11 +24530,11 @@
       ]
     },
     "runtime.aot.System.Reflection.Primitives/4.3.0": {
-      "sha512": "TQFaqrb0dZJRD00Yl7kT7XhzrHpRrxh419uE+tspCFDQ5dqJ3IC/QztYjsDaoFKydJflMiKDsnFYUEaGCx29KA==",
+      "sha512": "H8uucvnpgVnZizQqLfkfISLPfJ4SwTiZdhkciAZniRCjRR4iW23npVeAQVhsdaMsy1tVFt4lJgfzrbvQElRGlA==",
       "type": "package",
       "path": "runtime.aot.system.reflection.primitives/4.3.0",
       "files": [
-        ".signature.p7s",
+        ".nupkg.metadata",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "ref/netstandard/_._",
@@ -24549,11 +24554,11 @@
       ]
     },
     "runtime.aot.System.Resources.ResourceManager/4.3.0": {
-      "sha512": "WYIAmGdiREb/v7yxpTP6asgXGb1AyJtVrIpwpvV7AIGevyblOWF3D2hnMGXcaHLlmNNJ72Rp2etJ+B69t9X8Bg==",
+      "sha512": "UuU/71bzofPYs0edqzGObX8yJ0JzwxWPK8W1OC0EddWbLTOkmlDUAefJTiDqN0/UZYHMOHX5lJCwgXLsV3c/4A==",
       "type": "package",
       "path": "runtime.aot.system.resources.resourcemanager/4.3.0",
       "files": [
-        ".signature.p7s",
+        ".nupkg.metadata",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "ref/netstandard/_._",
@@ -24563,11 +24568,11 @@
       ]
     },
     "runtime.aot.System.Runtime/4.3.0": {
-      "sha512": "QwabwZbA+lxx3BQrsAz5X4jHAnkKLdIbcBNyZo+Cv+g4scb4Z7nFyJKbprfxp69m3Q89oobvLLt6huEmZCPOhg==",
+      "sha512": "+v3ECNS5te29NRB7qhY2Ea3KKK1ACWEoGRcicbXm79HqFi7eL0IuqPpCpv43MMVUWxGcnrP8+PdktB2c2P0L0w==",
       "type": "package",
       "path": "runtime.aot.system.runtime/4.3.0",
       "files": [
-        ".signature.p7s",
+        ".nupkg.metadata",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "ref/netstandard/_._",
@@ -24577,11 +24582,11 @@
       ]
     },
     "runtime.aot.System.Runtime.Handles/4.3.0": {
-      "sha512": "cHZInTmFtCFLFczmnbhP0TExvlT7aUD5etzjLwcNnBE3f6HfmMf4c0bnqDy69A9NwZhZLJiqXm6yxM2Y4wCbaA==",
+      "sha512": "ZAj0jGdfc7XhE8Ax9vVG4AJnBK/Bcd6qOfaEmI310KINj5g/4BzVNroxympBwiYsGFXbp8c1Urlb4TvNIbgbGg==",
       "type": "package",
       "path": "runtime.aot.system.runtime.handles/4.3.0",
       "files": [
-        ".signature.p7s",
+        ".nupkg.metadata",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "ref/netstandard/_._",
@@ -24591,11 +24596,11 @@
       ]
     },
     "runtime.aot.System.Runtime.InteropServices/4.3.0": {
-      "sha512": "Bgzq7/hBtCeRoGMHKeUwsQL5xPsTDIk3B/2a75DjQ36Z6tSyj1r0YV2+KO3FfAfJCu0ugmGMm15h7zmSSGKp+g==",
+      "sha512": "LfLCyGN9KNe3B4Dnytcqo1Q53FhenzdSaHrUSHRdwQAPnfRJg2FPlBAD8DKlCiIL8q0VzMLGD0PSG0D93ZxgMw==",
       "type": "package",
       "path": "runtime.aot.system.runtime.interopservices/4.3.0",
       "files": [
-        ".signature.p7s",
+        ".nupkg.metadata",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "ref/netstandard/_._",
@@ -24605,11 +24610,11 @@
       ]
     },
     "runtime.aot.System.Text.Encoding/4.3.0": {
-      "sha512": "JLV4AklJ5pE9UQoiJrpvvIUYkwzylZBah4H9ekIsm46ieOtjfr+i19s52YSZ6LpX9d99gNWd1kVwjAFe5Qxl5g==",
+      "sha512": "oFUYKrchmj4Y9BVT/VgCdUZkvvo0geGntd6Ojz27jsQcu0NDNcYK62arI0/LVQOYCVrQIdUfFMJqCjS4YQidJg==",
       "type": "package",
       "path": "runtime.aot.system.text.encoding/4.3.0",
       "files": [
-        ".signature.p7s",
+        ".nupkg.metadata",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "ref/netstandard/_._",
@@ -24619,11 +24624,11 @@
       ]
     },
     "runtime.aot.System.Text.Encoding.Extensions/4.3.0": {
-      "sha512": "O7zfZeYHR8cw/93iqOPeX/wZaDyksrdD2jQ14YLPada4W3KO2sHpn3E+0pzwcZC/WHukKLkfDHsxtw8+01ntzA==",
+      "sha512": "pxSiZre1BBpXurLR4HdFk5PKQHvLwB2wYc8xSaZV34y/zojUFTOJtMHprjXW217p72aR4llwVrp4WVlDppXcGw==",
       "type": "package",
       "path": "runtime.aot.system.text.encoding.extensions/4.3.0",
       "files": [
-        ".signature.p7s",
+        ".nupkg.metadata",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "ref/netstandard/_._",
@@ -24633,11 +24638,11 @@
       ]
     },
     "runtime.aot.System.Threading.Tasks/4.3.0": {
-      "sha512": "yWJZc+qhr09hBdd+XkdWq8VQYFzwfuZMOsplAmnnC1UNqSFtX7HfKjMWfV6FFi6thKRQOz1roxhb5dDOSfRznA==",
+      "sha512": "xkNtSW7Xcy3gauT0tEc5FgA2FviuG+QsPNEo3hf/pdOWCXHIQtLBJCWwXnc0B3VpCLSJB6A2zQ5XIxHS9mBkmQ==",
       "type": "package",
       "path": "runtime.aot.system.threading.tasks/4.3.0",
       "files": [
-        ".signature.p7s",
+        ".nupkg.metadata",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "ref/netstandard/_._",
@@ -24647,11 +24652,11 @@
       ]
     },
     "runtime.aot.System.Threading.Timer/4.3.0": {
-      "sha512": "5BNPkCAK3k3G92GWYVdo3jBPVmiNiB+ADKz79srUUeOme9Hn5J6ERaqqgrcyaYDqY0PmFxpvxY7U2uDioGO0iA==",
+      "sha512": "FdzqGdxrXAOZmKd4ung3i7jC6jGlqDtwvq7zm6Z1ttqJ8vUChh99W+8y2K/CsGCLtGwYGtgT2uOKWmjQwi74Mw==",
       "type": "package",
       "path": "runtime.aot.system.threading.timer/4.3.0",
       "files": [
-        ".signature.p7s",
+        ".nupkg.metadata",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "ref/netstandard/_._",
@@ -25113,11 +25118,11 @@
       ]
     },
     "runtime.win8-arm.runtime.native.System.IO.Compression/4.3.0": {
-      "sha512": "JuBzZJ9sQIm+uGFlPexJP16jtwRzw2vMk4fpkC/JvG+xvLSIA7txtUMfpMbroC1dXnNRqd4u4kbzs6n7Fja/nA==",
+      "sha512": "Vq1+MgltEQZEIvEhkw+gdEkm2+6QHvJCbX+/fdTmed37Rx18+GMLzGwNd81qb2VfpK6ywFQuB3rC28QkuOJGVg==",
       "type": "package",
       "path": "runtime.win8-arm.runtime.native.system.io.compression/4.3.0",
       "files": [
-        ".signature.p7s",
+        ".nupkg.metadata",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "runtime.win8-arm.runtime.native.system.io.compression.4.3.0.nupkg.sha512",
@@ -28582,11 +28587,11 @@
       ]
     },
     "System.Runtime.Serialization.Formatters/4.3.0": {
-      "sha512": "W4UqymabiCb1xxuKrspJCzCHW95VZQ3GCmzpDYHvJxVUvPY2siwU4A5rPu8ERaRPUvQRaO3jdX8Gr+oe5Y4JCA==",
+      "sha512": "KT591AkTNFOTbhZlaeMVvfax3RqhH1EJlcwF50Wm7sfnBLuHiOeZRRKrr1ns3NESkM20KPZ5Ol/ueMq5vg4QoQ==",
       "type": "package",
       "path": "system.runtime.serialization.formatters/4.3.0",
       "files": [
-        ".signature.p7s",
+        ".nupkg.metadata",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -28808,11 +28813,11 @@
       ]
     },
     "System.Runtime.WindowsRuntime/4.3.0": {
-      "sha512": "VvaEyMZHtirPYoyWOGdn/0MJVaVZdUdSKN+GhQDYc3LwcFAOzORRff8dECt1dCkCOP5pp0/pKG6Fjz8bbFv1Xw==",
+      "sha512": "xbgfgewneLCfKQfz0VzKsYDacZ680CudYw0uzj0bZ8ATpotkwicgtAsyJZ/J7/Dh2QIwpadjA2zLW/LFk7FKiA==",
       "type": "package",
       "path": "system.runtime.windowsruntime/4.3.0",
       "files": [
-        ".signature.p7s",
+        ".nupkg.metadata",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/portable-win8+wp8+wpa81/_._",
@@ -30313,11 +30318,11 @@
       ]
     },
     "Win2D.uwp/1.19.0": {
-      "sha512": "Dc2OmDM6l02eeTCFXTcW0sicpmIaHE4vfFoVZwHIYfdRfbTCOILqD8ADqTA0wz518fjjV9VtxUcTQ3JEZbIbTQ==",
+      "sha512": "pLL/gLb3uY75IlswAKzOvQnwwiGrMxZyBl2DbJOjuzG6SOWMp0sg+tkj+HZU8uyQ8jIdAbOE0Iu5+z9zyT5E6Q==",
       "type": "package",
       "path": "win2d.uwp/1.19.0",
       "files": [
-        ".signature.p7s",
+        ".nupkg.metadata",
         "Win2d.githash.txt",
         "build/native/Win2D.uwp.targets",
         "include/Microsoft.Graphics.Canvas.h",
@@ -30342,24 +30347,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\null\\.nuget\\packages\\": {},
+    "C:\\Users\\Null\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\null\\OneDrive - ErhvervsAkademi Sjælland\\Dokumenter\\Prøver\\2. Semester\\boligadministrationssystem\\MainAppWindows\\MainAppWindows\\MainAppWindows.csproj",
+      "projectUniqueName": "E:\\Users\\Zudrogs\\Source\\BoligAdministrationssystem\\MainAppWindows\\MainAppWindows\\MainAppWindows.csproj",
       "projectName": "MainAppWindows",
-      "projectPath": "C:\\Users\\null\\OneDrive - ErhvervsAkademi Sjælland\\Dokumenter\\Prøver\\2. Semester\\boligadministrationssystem\\MainAppWindows\\MainAppWindows\\MainAppWindows.csproj",
-      "packagesPath": "C:\\Users\\null\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\null\\OneDrive - ErhvervsAkademi Sjælland\\Dokumenter\\Prøver\\2. Semester\\boligadministrationssystem\\MainAppWindows\\MainAppWindows\\obj\\",
+      "projectPath": "E:\\Users\\Zudrogs\\Source\\BoligAdministrationssystem\\MainAppWindows\\MainAppWindows\\MainAppWindows.csproj",
+      "packagesPath": "C:\\Users\\Null\\.nuget\\packages\\",
+      "outputPath": "E:\\Users\\Zudrogs\\Source\\BoligAdministrationssystem\\MainAppWindows\\MainAppWindows\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\null\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Null\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

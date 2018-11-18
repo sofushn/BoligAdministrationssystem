@@ -598,3 +598,45 @@ C:\Users\null\OneDrive - ErhvervsAkademi Sjælland\Dokumenter\Prøver\2. Semeste
 C:\Users\null\OneDrive - ErhvervsAkademi Sjælland\Dokumenter\Prøver\2. Semester\boligadministrationssystem\MainAppWindows\MainAppWindows\obj\x86\Debug\Microsoft.Xaml.Interactions.pri.xml
 C:\Users\null\OneDrive - ErhvervsAkademi Sjælland\Dokumenter\Prøver\2. Semester\boligadministrationssystem\MainAppWindows\MainAppWindows\obj\x86\Debug\Microsoft.Xaml.Interactivity.pri.xml
 C:\Users\null\OneDrive - ErhvervsAkademi Sjælland\Dokumenter\Prøver\2. Semester\boligadministrationssystem\MainAppWindows\MainAppWindows\obj\x86\Debug\ProjectArchitectures.txt
+E:\Users\Zudrogs\Source\BoligAdministrationssystem\MainAppWindows\MainAppWindows\obj\x86\Debug\App.g.i.cs
+E:\Users\Zudrogs\Source\BoligAdministrationssystem\MainAppWindows\MainAppWindows\obj\x86\Debug\App.g.cs
+E:\Users\Zudrogs\Source\BoligAdministrationssystem\MainAppWindows\MainAppWindows\obj\x86\Debug\Views\AndelshaverPage.g.i.cs
+E:\Users\Zudrogs\Source\BoligAdministrationssystem\MainAppWindows\MainAppWindows\obj\x86\Debug\Views\AndelshaverPage.g.cs
+E:\Users\Zudrogs\Source\BoligAdministrationssystem\MainAppWindows\MainAppWindows\obj\x86\Debug\Views\Lejlighed\LejlighedPage.g.i.cs
+E:\Users\Zudrogs\Source\BoligAdministrationssystem\MainAppWindows\MainAppWindows\obj\x86\Debug\Views\Lejlighed\LejlighedPage.g.cs
+E:\Users\Zudrogs\Source\BoligAdministrationssystem\MainAppWindows\MainAppWindows\obj\x86\Debug\Views\Login\LoginPage.g.i.cs
+E:\Users\Zudrogs\Source\BoligAdministrationssystem\MainAppWindows\MainAppWindows\obj\x86\Debug\Views\Login\LoginPage.g.cs
+E:\Users\Zudrogs\Source\BoligAdministrationssystem\MainAppWindows\MainAppWindows\obj\x86\Debug\Views\MainPage.g.i.cs
+E:\Users\Zudrogs\Source\BoligAdministrationssystem\MainAppWindows\MainAppWindows\obj\x86\Debug\Views\MainPage.g.cs
+E:\Users\Zudrogs\Source\BoligAdministrationssystem\MainAppWindows\MainAppWindows\obj\x86\Debug\Views\ShellPage.g.i.cs
+E:\Users\Zudrogs\Source\BoligAdministrationssystem\MainAppWindows\MainAppWindows\obj\x86\Debug\Views\ShellPage.g.cs
+E:\Users\Zudrogs\Source\BoligAdministrationssystem\MainAppWindows\MainAppWindows\obj\x86\Debug\Views\Login\WelcomeLoginPage.g.i.cs
+E:\Users\Zudrogs\Source\BoligAdministrationssystem\MainAppWindows\MainAppWindows\obj\x86\Debug\Views\Login\WelcomeLoginPage.g.cs
+E:\Users\Zudrogs\Source\BoligAdministrationssystem\MainAppWindows\MainAppWindows\obj\x86\Debug\Views\Lejlighed\StatusIndberetningPage.g.i.cs
+E:\Users\Zudrogs\Source\BoligAdministrationssystem\MainAppWindows\MainAppWindows\obj\x86\Debug\Views\Lejlighed\StatusIndberetningPage.g.cs
+E:\Users\Zudrogs\Source\BoligAdministrationssystem\MainAppWindows\MainAppWindows\obj\x86\Debug\App.xaml
+E:\Users\Zudrogs\Source\BoligAdministrationssystem\MainAppWindows\MainAppWindows\obj\x86\Debug\Styles\_Colors.xaml
+E:\Users\Zudrogs\Source\BoligAdministrationssystem\MainAppWindows\MainAppWindows\obj\x86\Debug\Styles\_FontSizes.xaml
+E:\Users\Zudrogs\Source\BoligAdministrationssystem\MainAppWindows\MainAppWindows\obj\x86\Debug\Styles\_Thickness.xaml
+E:\Users\Zudrogs\Source\BoligAdministrationssystem\MainAppWindows\MainAppWindows\obj\x86\Debug\Styles\TextBlock.xaml
+E:\Users\Zudrogs\Source\BoligAdministrationssystem\MainAppWindows\MainAppWindows\obj\x86\Debug\Views\AndelshaverPage.xaml
+E:\Users\Zudrogs\Source\BoligAdministrationssystem\MainAppWindows\MainAppWindows\obj\x86\Debug\Views\Lejlighed\LejlighedPage.xaml
+E:\Users\Zudrogs\Source\BoligAdministrationssystem\MainAppWindows\MainAppWindows\obj\x86\Debug\Views\Login\LoginPage.xaml
+E:\Users\Zudrogs\Source\BoligAdministrationssystem\MainAppWindows\MainAppWindows\obj\x86\Debug\Views\MainPage.xaml
+E:\Users\Zudrogs\Source\BoligAdministrationssystem\MainAppWindows\MainAppWindows\obj\x86\Debug\Views\ShellPage.xaml
+E:\Users\Zudrogs\Source\BoligAdministrationssystem\MainAppWindows\MainAppWindows\obj\x86\Debug\Views\Login\WelcomeLoginPage.xaml
+E:\Users\Zudrogs\Source\BoligAdministrationssystem\MainAppWindows\MainAppWindows\obj\x86\Debug\Views\Lejlighed\StatusIndberetningPage.xaml
+E:\Users\Zudrogs\Source\BoligAdministrationssystem\MainAppWindows\MainAppWindows\obj\x86\Debug\App.xbf
+E:\Users\Zudrogs\Source\BoligAdministrationssystem\MainAppWindows\MainAppWindows\obj\x86\Debug\Styles\_Colors.xbf
+E:\Users\Zudrogs\Source\BoligAdministrationssystem\MainAppWindows\MainAppWindows\obj\x86\Debug\Styles\_FontSizes.xbf
+E:\Users\Zudrogs\Source\BoligAdministrationssystem\MainAppWindows\MainAppWindows\obj\x86\Debug\Styles\_Thickness.xbf
+E:\Users\Zudrogs\Source\BoligAdministrationssystem\MainAppWindows\MainAppWindows\obj\x86\Debug\Styles\TextBlock.xbf
+E:\Users\Zudrogs\Source\BoligAdministrationssystem\MainAppWindows\MainAppWindows\obj\x86\Debug\Views\AndelshaverPage.xbf
+E:\Users\Zudrogs\Source\BoligAdministrationssystem\MainAppWindows\MainAppWindows\obj\x86\Debug\Views\Lejlighed\LejlighedPage.xbf
+E:\Users\Zudrogs\Source\BoligAdministrationssystem\MainAppWindows\MainAppWindows\obj\x86\Debug\Views\Login\LoginPage.xbf
+E:\Users\Zudrogs\Source\BoligAdministrationssystem\MainAppWindows\MainAppWindows\obj\x86\Debug\Views\MainPage.xbf
+E:\Users\Zudrogs\Source\BoligAdministrationssystem\MainAppWindows\MainAppWindows\obj\x86\Debug\Views\ShellPage.xbf
+E:\Users\Zudrogs\Source\BoligAdministrationssystem\MainAppWindows\MainAppWindows\obj\x86\Debug\Views\Login\WelcomeLoginPage.xbf
+E:\Users\Zudrogs\Source\BoligAdministrationssystem\MainAppWindows\MainAppWindows\obj\x86\Debug\Views\Lejlighed\StatusIndberetningPage.xbf
+E:\Users\Zudrogs\Source\BoligAdministrationssystem\MainAppWindows\MainAppWindows\obj\x86\Debug\MainAppWindows.exe
+E:\Users\Zudrogs\Source\BoligAdministrationssystem\MainAppWindows\MainAppWindows\obj\x86\Debug\MainAppWindows.pdb
