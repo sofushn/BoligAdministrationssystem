@@ -60,6 +60,13 @@ namespace UWP_App
         // Everything that needs to be loaded after the app has started
         private async Task StartupAsync()
         {
+            await Task.CompletedTask;
+        }
+
+        // InitializeAsync
+        // Anything that needs to be done before anything else.
+        private async Task InitializeAsync()
+        {
             //TODO : Make it possible to login or change user
             if (!CurrentUser.IsInitialized)
             {
@@ -68,13 +75,6 @@ namespace UWP_App
                 await CurrentUser.Initialize(0, new TempTestData());
             }
 
-            await Task.CompletedTask;
-        }
-
-        // InitializeAsync
-        // Anything that needs to be done before anything else.
-        private async Task InitializeAsync()
-        {
             await Task.CompletedTask;
         }
     }

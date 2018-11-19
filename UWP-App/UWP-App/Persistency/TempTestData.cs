@@ -7,7 +7,7 @@ using UWP_App.Model;
 
 namespace UWP_App.Persistency
 {
-    public class TempTestData : IRetrievePersistency, ICreatePersistency
+    public class TempTestData : IPersistency
     {
         private static List<StatusRapportBase> _statusRapports;
 
@@ -153,7 +153,7 @@ namespace UWP_App.Persistency
             return new Andelshaver() { Andelshaver_ID = 0 };
         }
 
-        public void CreateStatusRapport(StatusRapportBase statusRapport)
+        public async Task CreateStatusRapport(StatusRapportBase statusRapport)
         {
             // Simulates the DB generating a id
             statusRapport.Status_ID = _statusRapports.Count;

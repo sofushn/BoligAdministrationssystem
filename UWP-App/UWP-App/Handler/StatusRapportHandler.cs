@@ -11,50 +11,46 @@ namespace UWP_App.Handler
         private ICreatePersistency _createPersistency;
         private IRetrievePersistency _retrievePersistency;
         
-        public StatusRapportHandler()
+        public StatusRapportHandler(IPersistency persistency)
         {
-            TempTestData testData = new TempTestData();
-            _createPersistency = testData;
-            _retrievePersistency = testData;
+            _createPersistency = persistency;
+            _retrievePersistency = persistency;
         }
 
         public async Task CreateRapportAsync(string note, StatusValues value, StatusRapportTypes type, ICanBeReportedOn itemToBeREpportedOn)
         {
-            await Task.Run(() =>
+            StatusRapportBase baseRapport = null;
+            switch (type)
             {
-                StatusRapportBase baseRapport = null;
-                switch (type)
+                case StatusRapportTypes.Faldstamme:
                 {
-                    case StatusRapportTypes.Faldstamme:
-                    {
-                        StatusRapportFaldstamme faldstammeRapport = new StatusRapportFaldstamme();
-                        faldstammeRapport.Faldstamme = itemToBeREpportedOn as Faldstamme;
+                    StatusRapportFaldstamme faldstammeRapport = new StatusRapportFaldstamme();
+                    faldstammeRapport.Faldstamme = itemToBeREpportedOn as Faldstamme;
 
-                        baseRapport = faldstammeRapport;
-                        break;
-                    }
-                    case StatusRapportTypes.Vindue:
-                    {
-                        StatusRapportVindue vindueRapport = new StatusRapportVindue();
-                        vindueRapport.Vindue = itemToBeREpportedOn as Vindue;
-
-                        baseRapport = vindueRapport;
-                        break;
-                    }
-                    default:
-                    {
-                        throw new ArgumentException("is not a valid value", "type");
-                    }
+                    baseRapport = faldstammeRapport;
+                    break;
                 }
+                case StatusRapportTypes.Vindue:
+                {
+                    StatusRapportVindue vindueRapport = new StatusRapportVindue();
+                    vindueRapport.Vindue = itemToBeREpportedOn as Vindue;
 
-                baseRapport.Dato = DateTime.Now;
-                baseRapport.Godkendt = false;
-                baseRapport.Note = note;
-                baseRapport.Status = value;
+                    baseRapport = vindueRapport;
+                    break;
+                }
+                default:
+                {
+                    throw new ArgumentException("is not a valid value", "type");
+                }
+            }
 
-                //DB-IMP : Change to real persistency class
-                _createPersistency.CreateStatusRapport(baseRapport);
-            });
+            baseRapport.Dato = DateTime.Now;
+            baseRapport.Godkendt = false;
+            baseRapport.Note = note;
+            baseRapport.Status = value;
+            
+            await _createPersistency.CreateStatusRapport(baseRapport);
+        
         }
 
         public async Task<IEnumerable<StatusRapportBase>> GetLejlighedsRapporter(Lejlighed lejlighed)

@@ -13,7 +13,7 @@ namespace UWP_App.Model
             {
                 if (!IsInitialized)
                 {
-                    throw new Exception("User is not initialized. CurrentUser.InitializeAsync() must be called first.");
+                    //throw new Exception("User is not initialized. CurrentUser.InitializeAsync() must be called first.");
                 }
                 return _user;
             }
@@ -29,8 +29,11 @@ namespace UWP_App.Model
 
             // Gets a user with specified ID
             _user = await retriever.GetAndelshaverAsync(andelshaverID);
+
             // Gets users kontrakter
-            _user.Kontrakter = await retriever.GetAndelshaversKontrakterAsync(_user);
+            // No need the get all the contracts unless the user requests it
+            // _user.Kontrakter = await retriever.GetAndelshaversKontrakterAsync(_user);
+
             // Gets users lejligheder
             _user.Lejligheder = await retriever.GetAndelshaversLejlighederAsync(_user);
 

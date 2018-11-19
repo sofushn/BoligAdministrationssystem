@@ -7,12 +7,13 @@ using UWP_App.Model;
 
 namespace UWP_App.Persistency
 {
-    public class PersistencyFacade : ICreatePersistency, IRetrievePersistency
+    public class PersistencyFacade : IPersistency
     {
         private static HttpClient _httpClient;
         private static HttpClient HttpClient
         {
             get {
+                // return if already initialized
                 if (_httpClient != null) return _httpClient;
 
                 HttpClientHandler handler = new HttpClientHandler();
@@ -30,21 +31,40 @@ namespace UWP_App.Persistency
             }
         }
 
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="lejlighed"></param>
+        /// <returns></returns>
         public async Task<IEnumerable<Faldstamme>> GetLejlighedsFaldstammerAsync(Lejlighed lejlighed)
         {
             throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="lejlighed"></param>
+        /// <returns></returns>
         public async Task<IEnumerable<Vindue>> GetLejlighedsVinduerAsync(Lejlighed lejlighed)
         {
             throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="lejlighed"></param>
+        /// <returns></returns>
         public async Task<IEnumerable<StatusRapportBase>> GetLejlighedsStatusRapporterAsync(Lejlighed lejlighed) {
             throw new System.NotImplementedException();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="andelshaver"></param>
+        /// <returns></returns>
         public async Task<IEnumerable<Lejlighed>> GetAndelshaversLejlighederAsync(Andelshaver andelshaver)
         {
             using (HttpClient client = HttpClient) {
@@ -63,6 +83,11 @@ namespace UWP_App.Persistency
             throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// Henter en andelshaver fra serveren
+        /// </summary>
+        /// <param name="andelshaverID">Andelshaveren id nummer</param>
+        /// <returns>En andelshaver</returns>
         public async Task<Andelshaver> GetAndelshaverAsync(int andelshaverID) {
             using (HttpClient client = HttpClient)
             {
@@ -75,8 +100,21 @@ namespace UWP_App.Persistency
             return null;
         }
 
-        public void CreateStatusRapport(StatusRapportBase statusRapport) {
-            throw new NotImplementedException();
+        /// <summary>
+        /// Tilføjer en ny statusrapport til DB
+        /// </summary>
+        /// <param name="statusRapport">Statusrapporten som skal tilføjes til DB</param>
+        /// <returns></returns>
+        public async Task CreateStatusRapport(StatusRapportBase statusRapport) {
+            using (HttpClient client = HttpClient)
+            {
+                string uri = "Status_Raport/";
+                HttpResponseMessage responseMessage = await client.PostAsJsonAsync(uri, statusRapport);
+                if (!responseMessage.IsSuccessStatusCode)
+                {
+                    throw new Exception($"[{responseMessage.StatusCode}] - {responseMessage.ReasonPhrase}");
+                }
+            }
         }
     }
 }

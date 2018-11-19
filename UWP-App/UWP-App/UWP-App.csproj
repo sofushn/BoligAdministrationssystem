@@ -113,6 +113,7 @@
     <Compile Include="Model\StatusRapport\StatusRapportVindue.cs" />
     <Compile Include="Model\Vindue.cs" />
     <Compile Include="Persistency\Interface\ICreatePersistency.cs" />
+    <Compile Include="Persistency\Interface\IPersistency.cs" />
     <Compile Include="Persistency\Interface\IRetrievePersistency.cs" />
     <Compile Include="Persistency\PersistencyFacade.cs" />
     <Compile Include="Persistency\TempTestData.cs" />

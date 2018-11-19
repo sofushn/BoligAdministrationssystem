@@ -111,16 +111,17 @@ namespace UWP_App.ViewModel
 
         public LejlighedViewModel()
         {
+            // Only selectes first lejlighed even if user owns more that one
+            //TODO : Let the user select which lejlighed they want to view
+            CurrentLejlighed = CurrentUser.User.Lejligheder.FirstOrDefault();
+            //DB-IMP : Move away from ViewModel
+            _rapportHandler = new StatusRapportHandler(new Persistency.TempTestData());
+
             InitializeAsync();
         }
 
         private async void InitializeAsync()
         {
-            _rapportHandler = new StatusRapportHandler();
-
-            // Only selectes first lejlighed even if user owns more that one
-            //TODO : Let the user select which lejlighed they want to view
-            CurrentLejlighed = CurrentUser.User.Lejligheder.FirstOrDefault();
 
             StatusRapporter = await _rapportHandler.GetLejlighedsRapporter(CurrentLejlighed);
         }
