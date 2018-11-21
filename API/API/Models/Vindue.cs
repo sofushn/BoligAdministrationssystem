@@ -22,7 +22,9 @@ namespace API.Models
 
         public int Status { get; set; }
 
-        public DateTime Sidst_Malet { get; set; }
+        public DateTime? Sidst_Malet { get; set; }
+
+        public string Beskrivelse { get; set; }
 
         public virtual Lejligheder Lejligheder { get; set; }
 

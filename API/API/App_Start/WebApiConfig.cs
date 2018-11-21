@@ -13,9 +13,11 @@ namespace API
         {
             // Web API configuration and services
 
-            // Web API routes
+            // Enambles Web API 2 attribute routes
             config.MapHttpAttributeRoutes();
 
+            // Other Web API configurations
+            // Convention-based routing.
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
                 routeTemplate: "api/{controller}/{id}",

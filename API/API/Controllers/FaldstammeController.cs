@@ -17,104 +17,111 @@ namespace API.Controllers
         private BASContext db = new BASContext();
 
         // GET: api/Faldstamme
-        public IQueryable<Faldstammer> GetFaldstammer()
-        {
-            return db.Faldstammer;
-        }
+        //public IQueryable<Faldstammer> GetFaldstammer()
+        //{
+        //    return db.Faldstammer;
+        //}
 
         // GET: api/Faldstamme/5
-        [ResponseType(typeof(Faldstammer))]
-        public IHttpActionResult GetFaldstammer(int id)
+        //[ResponseType(typeof(Faldstammer))]
+        [Route("api/Faldstamme/{lejlighedNo}")]
+        public IQueryable<Faldstammer> GetFaldstammer(int lejlighedNo)
         {
-            Faldstammer faldstammer = db.Faldstammer.Find(id);
-            if (faldstammer == null)
-            {
-                return NotFound();
-            }
+            return db.Faldstammer.Where(x => x.Lejlighed_No == lejlighedNo);
+            //if (faldstammer == null)
+            //{
+            //    return NotFound();
+            //}
 
-            return Ok(faldstammer);
+            //return Ok(faldstammer);
         }
-
+        #region comments
         // PUT: api/Faldstamme/5
-        [ResponseType(typeof(void))]
-        public IHttpActionResult PutFaldstammer(int id, Faldstammer faldstammer)
-        {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
+        //[ResponseType(typeof(void))]
+        //public IHttpActionResult PutFaldstammer(int id, Faldstammer faldstammer)
+        //{
+        //    if (!ModelState.IsValid)
+        //    {
+        //        return BadRequest(ModelState);
+        //    }
 
-            if (id != faldstammer.Faldstamme_ID)
-            {
-                return BadRequest();
-            }
+        //    if (id != faldstammer.Faldstamme_ID)
+        //    {
+        //        return BadRequest();
+        //    }
 
-            db.Entry(faldstammer).State = EntityState.Modified;
+        //    db.Entry(faldstammer).State = EntityState.Modified;
 
-            try
-            {
-                db.SaveChanges();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!FaldstammerExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
+        //    try
+        //    {
+        //        db.SaveChanges();
+        //    }
+        //    catch (DbUpdateConcurrencyException)
+        //    {
+        //        if (!FaldstammerExists(id))
+        //        {
+        //            return NotFound();
+        //        }
+        //        else
+        //        {
+        //            throw;
+        //        }
+        //    }
 
-            return StatusCode(HttpStatusCode.NoContent);
-        }
+        //    return StatusCode(HttpStatusCode.NoContent);
+        //}
 
         // POST: api/Faldstamme
-        [ResponseType(typeof(Faldstammer))]
-        public IHttpActionResult PostFaldstammer(Faldstammer faldstammer)
-        {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
+        //[ResponseType(typeof(Faldstammer))]
+        //public IHttpActionResult PostFaldstammer(Faldstammer faldstammer)
+        //{
+        //    if (!ModelState.IsValid)
+        //    {
+        //        return BadRequest(ModelState);
+        //    }
 
-            db.Faldstammer.Add(faldstammer);
+        //    db.Faldstammer.Add(faldstammer);
 
-            try
-            {
-                db.SaveChanges();
-            }
-            catch (DbUpdateException)
-            {
-                if (FaldstammerExists(faldstammer.Faldstamme_ID))
-                {
-                    return Conflict();
-                }
-                else
-                {
-                    throw;
-                }
-            }
+        //    try
+        //    {
+        //        db.SaveChanges();
+        //    }
+        //    catch (DbUpdateException)
+        //    {
+        //        if (FaldstammerExists(faldstammer.Faldstamme_ID))
+        //        {
+        //            return Conflict();
+        //        }
+        //        else
+        //        {
+        //            throw;
+        //        }
+        //    }
 
-            return CreatedAtRoute("DefaultApi", new { id = faldstammer.Faldstamme_ID }, faldstammer);
-        }
+        //    return CreatedAtRoute("DefaultApi", new { id = faldstammer.Faldstamme_ID }, faldstammer);
+        //}
 
         // DELETE: api/Faldstamme/5
-        [ResponseType(typeof(Faldstammer))]
-        public IHttpActionResult DeleteFaldstammer(int id)
-        {
-            Faldstammer faldstammer = db.Faldstammer.Find(id);
-            if (faldstammer == null)
-            {
-                return NotFound();
-            }
+        //[ResponseType(typeof(Faldstammer))]
+        //public IHttpActionResult DeleteFaldstammer(int id)
+        //{
+        //    Faldstammer faldstammer = db.Faldstammer.Find(id);
+        //    if (faldstammer == null)
+        //    {
+        //        return NotFound();
+        //    }
 
-            db.Faldstammer.Remove(faldstammer);
-            db.SaveChanges();
+        //    db.Faldstammer.Remove(faldstammer);
+        //    db.SaveChanges();
 
-            return Ok(faldstammer);
-        }
+        //    return Ok(faldstammer);
+        //}
+
+        //private bool FaldstammerExists(int id)
+        //{
+        //    return db.Faldstammer.Count(e => e.Faldstamme_ID == id) > 0;
+        //}
+        #endregion
 
         protected override void Dispose(bool disposing)
         {
@@ -123,11 +130,6 @@ namespace API.Controllers
                 db.Dispose();
             }
             base.Dispose(disposing);
-        }
-
-        private bool FaldstammerExists(int id)
-        {
-            return db.Faldstammer.Count(e => e.Faldstamme_ID == id) > 0;
         }
     }
 }

@@ -29,6 +29,8 @@ namespace API.Models
 
         public int Status { get; set; }
 
+        public string Beskrivelse { get; set; }
+
         public virtual Lejligheder Lejligheder { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

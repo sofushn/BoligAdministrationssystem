@@ -65,56 +65,56 @@ namespace API.Controllers
         }
 
         // PUT: api/Status_Raport/5
-        [ResponseType(typeof(void))]
-        public IHttpActionResult PutStatus_Raport(int id, Status_Raport status_Raport)
-        {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
+        //[ResponseType(typeof(void))]
+        //public IHttpActionResult PutStatus_Raport(int id, Status_Raport status_Raport)
+        //{
+        //    if (!ModelState.IsValid)
+        //    {
+        //        return BadRequest(ModelState);
+        //    }
 
-            if (id != status_Raport.Status_ID)
-            {
-                return BadRequest();
-            }
+        //    if (id != status_Raport.Status_ID)
+        //    {
+        //        return BadRequest();
+        //    }
 
-            db.Entry(status_Raport).State = EntityState.Modified;
+        //    db.Entry(status_Raport).State = EntityState.Modified;
 
-            try
-            {
-                db.SaveChanges();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!Status_RaportExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
+        //    try
+        //    {
+        //        db.SaveChanges();
+        //    }
+        //    catch (DbUpdateConcurrencyException)
+        //    {
+        //        if (!Status_RaportExists(id))
+        //        {
+        //            return NotFound();
+        //        }
+        //        else
+        //        {
+        //            throw;
+        //        }
+        //    }
 
-            return StatusCode(HttpStatusCode.NoContent);
-        }
+        //    return StatusCode(HttpStatusCode.NoContent);
+        //}
 
 
         // DELETE: api/Status_Raport/5
-        [ResponseType(typeof(Status_Raport))]
-        public IHttpActionResult DeleteStatus_Raport(int id)
-        {
-            Status_Raport status_Raport = db.Status_Raport.Find(id);
-            if (status_Raport == null)
-            {
-                return NotFound();
-            }
+        //[ResponseType(typeof(Status_Raport))]
+        //public IHttpActionResult DeleteStatus_Raport(int id)
+        //{
+        //    Status_Raport status_Raport = db.Status_Raport.Find(id);
+        //    if (status_Raport == null)
+        //    {
+        //        return NotFound();
+        //    }
 
-            db.Status_Raport.Remove(status_Raport);
-            db.SaveChanges();
+        //    db.Status_Raport.Remove(status_Raport);
+        //    db.SaveChanges();
 
-            return Ok(status_Raport);
-        }
+        //    return Ok(status_Raport);
+        //}
 
         protected override void Dispose(bool disposing)
         {

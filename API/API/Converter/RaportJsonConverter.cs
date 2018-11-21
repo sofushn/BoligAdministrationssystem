@@ -18,7 +18,7 @@ namespace API.Converter
         public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
         {
             JObject tmp = JObject.Load(reader);
-            Status_Raport report;
+            Status_Raport report = null;
 
             switch (tmp.Value<int>("RaportType"))
             {

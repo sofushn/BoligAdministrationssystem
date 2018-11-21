@@ -38,7 +38,18 @@ namespace UWP_App.Persistency
         /// <returns></returns>
         public async Task<IEnumerable<Faldstamme>> GetLejlighedsFaldstammerAsync(Lejlighed lejlighed)
         {
-            throw new NotImplementedException();
+            using (HttpClient client = HttpClient)
+            {
+                string uri = "Faldstamme/" + lejlighed.Lejlighed_No;
+                HttpResponseMessage responseMessage = await client.GetAsync(uri);
+                if (responseMessage.IsSuccessStatusCode)
+                {
+                    return await responseMessage.Content.ReadAsAsync<IEnumerable<Faldstamme>>();
+                }
+                else
+                    throw new HttpRequestException($"StausCode: {responseMessage.StatusCode}; ReasonPhrase: {responseMessage.ReasonPhrase}");
+
+            }
         }
 
         /// <summary>
@@ -48,7 +59,18 @@ namespace UWP_App.Persistency
         /// <returns></returns>
         public async Task<IEnumerable<Vindue>> GetLejlighedsVinduerAsync(Lejlighed lejlighed)
         {
-            throw new NotImplementedException();
+            using (HttpClient client = HttpClient)
+            {
+                string uri = "Vindue/" + lejlighed.Lejlighed_No;
+                HttpResponseMessage responseMessage = await client.GetAsync(uri);
+                if (responseMessage.IsSuccessStatusCode)
+                {
+                    return await responseMessage.Content.ReadAsAsync<IEnumerable<Vindue>>();
+                }
+                else
+                    throw new HttpRequestException($"StausCode: {responseMessage.StatusCode}; ReasonPhrase: {responseMessage.ReasonPhrase}");
+
+            }
         }
 
         /// <summary>
@@ -56,8 +78,19 @@ namespace UWP_App.Persistency
         /// </summary>
         /// <param name="lejlighed"></param>
         /// <returns></returns>
-        public async Task<IEnumerable<StatusRapportBase>> GetLejlighedsStatusRapporterAsync(Lejlighed lejlighed) {
-            throw new System.NotImplementedException();
+        public async Task<IEnumerable<StatusRapportBase>> GetLejlighedsStatusRapporterAsync(Lejlighed lejlighed)
+        {
+            using(HttpClient client = HttpClient)
+            {
+                string uri = "api/StatusRapporter/" + lejlighed.Lejlighed_No;
+                HttpResponseMessage responseMessage = await client.GetAsync(uri);
+                if (responseMessage.IsSuccessStatusCode)
+                {
+                    return await responseMessage.Content.ReadAsAsync<IEnumerable<StatusRapportBase>>();
+                }
+                else
+                    throw new HttpRequestException($"StausCode: {responseMessage.StatusCode}; ReasonPhrase: {responseMessage.ReasonPhrase}");
+            }
         }
 
         /// <summary>
@@ -68,7 +101,7 @@ namespace UWP_App.Persistency
         public async Task<IEnumerable<Lejlighed>> GetAndelshaversLejlighederAsync(Andelshaver andelshaver)
         {
             using (HttpClient client = HttpClient) {
-                string uri = "ListAndelshaversLejæihederViews/" + andelshaver.Andelshaver_ID;
+                string uri = "ListAndelshaversLejlighederViews/" + andelshaver.Andelshaver_ID;
                 HttpResponseMessage responseMessage = await client.GetAsync(uri);
                 if (responseMessage.IsSuccessStatusCode) {
                     return await responseMessage.Content.ReadAsAsync<IEnumerable<Lejlighed>>();

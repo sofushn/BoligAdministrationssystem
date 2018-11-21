@@ -24,97 +24,22 @@ namespace API.Controllers
 
         // GET: api/ListLejlighedersRaporterViews/5
         //[ResponseType(typeof(ListLejlighedersRaporterView))]
-        public IQueryable<ListLejlighedersRaporterView> GetListLejlighedersRaporterView(int id)
-        {
-            return db.ListLejlighedersRaporterView.Where(x => x.Lejlighed_No == id);
-        //    ListLejlighedersRaporterView listLejlighedersRaporterView = db.ListLejlighedersRaporterView.Find(id);
-        //    if (listLejlighedersRaporterView == null)
-        //    {
-        //        return NotFound();
-        //    }
-
-        //    return Ok(listLejlighedersRaporterView);
-        }
-
-        // PUT: api/ListLejlighedersRaporterViews/5
-        [ResponseType(typeof(void))]
-        public IHttpActionResult PutListLejlighedersRaporterView(int id, ListLejlighedersRaporterView listLejlighedersRaporterView)
-        {
-            if (!ModelState.IsValid)
+        [Route("api/StatusRapporter/{lejlighedNo}")]
+        [HttpGet]
+        public IQueryable<ListLejlighedersRaporterView> HentLejlighedsStatusRapporter(int lejlighedNo) {
+            foreach (ListLejlighedersRaporterView item in db.ListLejlighedersRaporterView)
             {
-                return BadRequest(ModelState);
+                ListLejlighedersRaporterView t = item;
             }
+            return db.ListLejlighedersRaporterView.Where(x => x.Lejlighed_No == lejlighedNo);
 
-            if (id != listLejlighedersRaporterView.Status_ID)
-            {
-                return BadRequest();
-            }
+            //    ListLejlighedersRaporterView listLejlighedersRaporterView = db.ListLejlighedersRaporterView.Find(id);
+            //    if (listLejlighedersRaporterView == null)
+            //    {
+            //        return NotFound();
+            //    }
 
-            db.Entry(listLejlighedersRaporterView).State = EntityState.Modified;
-
-            try
-            {
-                db.SaveChanges();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!ListLejlighedersRaporterViewExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
-            return StatusCode(HttpStatusCode.NoContent);
-        }
-
-        // POST: api/ListLejlighedersRaporterViews
-        [ResponseType(typeof(ListLejlighedersRaporterView))]
-        public IHttpActionResult PostListLejlighedersRaporterView(ListLejlighedersRaporterView listLejlighedersRaporterView)
-        {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-
-            db.ListLejlighedersRaporterView.Add(listLejlighedersRaporterView);
-
-            try
-            {
-                db.SaveChanges();
-            }
-            catch (DbUpdateException)
-            {
-                if (ListLejlighedersRaporterViewExists(listLejlighedersRaporterView.Status_ID))
-                {
-                    return Conflict();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
-            return CreatedAtRoute("DefaultApi", new { id = listLejlighedersRaporterView.Status_ID }, listLejlighedersRaporterView);
-        }
-
-        // DELETE: api/ListLejlighedersRaporterViews/5
-        [ResponseType(typeof(ListLejlighedersRaporterView))]
-        public IHttpActionResult DeleteListLejlighedersRaporterView(int id)
-        {
-            ListLejlighedersRaporterView listLejlighedersRaporterView = db.ListLejlighedersRaporterView.Find(id);
-            if (listLejlighedersRaporterView == null)
-            {
-                return NotFound();
-            }
-
-            db.ListLejlighedersRaporterView.Remove(listLejlighedersRaporterView);
-            db.SaveChanges();
-
-            return Ok(listLejlighedersRaporterView);
+            //    return Ok(listLejlighedersRaporterView);
         }
 
         protected override void Dispose(bool disposing)
@@ -124,11 +49,6 @@ namespace API.Controllers
                 db.Dispose();
             }
             base.Dispose(disposing);
-        }
-
-        private bool ListLejlighedersRaporterViewExists(int id)
-        {
-            return db.ListLejlighedersRaporterView.Count(e => e.Status_ID == id) > 0;
         }
     }
 }
