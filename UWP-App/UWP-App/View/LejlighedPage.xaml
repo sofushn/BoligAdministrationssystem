@@ -16,16 +16,15 @@
 
     <Page.Resources>
         <converter:BoolToColorConverter x:Key="boolToColor" />
-        <DataTemplate x:Key="gridViewTemplate">
+        <DataTemplate x:Key="gridViewTemplate" x:DataType="data:StatusRapportBase">
             <Grid BorderThickness="2" BorderBrush="{Binding Godkendt, Converter={StaticResource boolToColor}}">
-                <StackPanel Margin="10" MaxWidth="150">
-                    <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="{Binding Status_ID}" Grid.Column="0" Margin="0,0,10,0"/>
-                        <TextBlock Text="{Binding Dato}" Grid.Column="1"/>
+                <StackPanel Margin="10" Width="150">
+                    <StackPanel Orientation="Horizontal" Spacing="10">
+                        <TextBlock Text="{Binding Status_ID}"/>
+                        <TextBlock Text="{Binding DatoString}"/>
                     </StackPanel>
-                    <TextBlock Text="{Binding Status}" Grid.Row="1" Grid.ColumnSpan="2"/>
-                    <TextBlock Text="{Binding Note}" TextWrapping="WrapWholeWords"
-                               Grid.Row="2" Grid.ColumnSpan="2" Grid.Column="0"/>
+                    <TextBlock Text="{Binding Status}" />
+                    <TextBlock Text="{Binding Note}" TextWrapping="WrapWholeWords"/>
                 </StackPanel>
             </Grid>
         </DataTemplate>

@@ -99,6 +99,7 @@
     <Compile Include="Common\NavigationService.cs" />
     <Compile Include="Common\RelayCommand.cs" />
     <Compile Include="Converter\BoolToColorConverter.cs" />
+    <Compile Include="Converter\StatusRapportJsonConverter.cs" />
     <Compile Include="Handler\StatusRapportHandler.cs" />
     <Compile Include="Model\Andelshaver.cs" />
     <Compile Include="Model\CurrentUser.cs" />

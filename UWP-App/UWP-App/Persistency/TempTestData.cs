@@ -105,7 +105,6 @@ namespace UWP_App.Persistency
 
         public async Task<IEnumerable<StatusRapportBase>> GetLejlighedsStatusRapporterAsync(Lejlighed lejlighed)
         {
-            await Task.Yield();
             return _statusRapports;
         }
 
@@ -140,7 +139,7 @@ namespace UWP_App.Persistency
                 new Kontrakt()
                 {
                     Kontrakt_ID = 0,
-                    Andelshaver_ID = 0,
+                    Andelshaver_ID = 1,
                     Lejlighed_No = 0,
                 }
             };
@@ -150,7 +149,11 @@ namespace UWP_App.Persistency
 
         public async Task<Andelshaver> GetAndelshaverAsync(int andelshaverID)
         {
-            return new Andelshaver() { Andelshaver_ID = 0 };
+            return new Andelshaver() { Andelshaver_ID = 1 };
+        }
+
+        public IEnumerable<StatusRapportBase> GetLejlighedsStatusRapporter(Lejlighed lejlighed) {
+            return GetLejlighedsStatusRapporterAsync(lejlighed).Result;
         }
 
         public async Task CreateStatusRapport(StatusRapportBase statusRapport)

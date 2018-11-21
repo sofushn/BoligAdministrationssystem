@@ -53,9 +53,9 @@ namespace UWP_App.Handler
         
         }
 
-        public async Task<IEnumerable<StatusRapportBase>> GetLejlighedsRapporter(Lejlighed lejlighed)
+        public IEnumerable<StatusRapportBase> GetLejlighedsRapporter(Lejlighed lejlighed)
         {
-            return await _retrievePersistency.GetLejlighedsStatusRapporterAsync(lejlighed);
+            return _retrievePersistency.GetLejlighedsStatusRapporter(lejlighed);
         }
     }
 }

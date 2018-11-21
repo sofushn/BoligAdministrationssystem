@@ -10,7 +10,7 @@ namespace UWP_App.Model
         public string Beskrivelse { get; set; }
 
         public StatusValues Status { get; set; }
-        public DateTime Sidst_Malet { get; set; }
+        public DateTime? Sidst_Malet { get; set; }
 
     }
 }

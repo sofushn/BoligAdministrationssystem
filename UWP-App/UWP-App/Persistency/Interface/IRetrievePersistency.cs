@@ -13,5 +13,7 @@ namespace UWP_App.Persistency
         Task<IEnumerable<Kontrakt>> GetAndelshaversKontrakterAsync(Andelshaver andelshaver);
         Task<Andelshaver> GetAndelshaverAsync(int andelshaverID);
 
+
+        IEnumerable<StatusRapportBase> GetLejlighedsStatusRapporter(Lejlighed lejlighed);
     }
 }

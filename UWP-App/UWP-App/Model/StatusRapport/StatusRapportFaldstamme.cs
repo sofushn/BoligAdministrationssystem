@@ -4,5 +4,9 @@
     {
         public Faldstamme Faldstamme { get; set; }
         public override StatusRapportTypes RapportType { get => StatusRapportTypes.Faldstamme; }
+
+        public StatusRapportFaldstamme(): base() {
+            Faldstamme = new Faldstamme();
+        }
     }
 }

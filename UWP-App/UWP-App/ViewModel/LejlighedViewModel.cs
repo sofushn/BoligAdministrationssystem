@@ -114,17 +114,13 @@ namespace UWP_App.ViewModel
             // Only selectes first lejlighed even if user owns more that one
             //TODO : Let the user select which lejlighed they want to view
             CurrentLejlighed = CurrentUser.User.Lejligheder.FirstOrDefault();
+
             //DB-IMP : Move away from ViewModel
-            _rapportHandler = new StatusRapportHandler(new Persistency.TempTestData());
+            _rapportHandler = new StatusRapportHandler(new Persistency.PersistencyFacade());
 
-            InitializeAsync();
+            StatusRapporter = _rapportHandler.GetLejlighedsRapporter(CurrentLejlighed);
         }
-
-        private async void InitializeAsync()
-        {
-
-            StatusRapporter = await _rapportHandler.GetLejlighedsRapporter(CurrentLejlighed);
-        }
+        
 
         private async void CreateStatusRapport()
         {
@@ -132,7 +128,7 @@ namespace UWP_App.ViewModel
             IsPaneOpen = false;
 
             //TODO : Make async
-            StatusRapporter = await _rapportHandler.GetLejlighedsRapporter(CurrentLejlighed);
+            StatusRapporter = _rapportHandler.GetLejlighedsRapporter(CurrentLejlighed);
         }
 
         private void StatusRapportTypeChanged(StatusRapportTypes value)

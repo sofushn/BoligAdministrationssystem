@@ -27,10 +27,10 @@ namespace API.Controllers
         [Route("api/StatusRapporter/{lejlighedNo}")]
         [HttpGet]
         public IQueryable<ListLejlighedersRaporterView> HentLejlighedsStatusRapporter(int lejlighedNo) {
-            foreach (ListLejlighedersRaporterView item in db.ListLejlighedersRaporterView)
-            {
-                ListLejlighedersRaporterView t = item;
-            }
+            //foreach (ListLejlighedersRaporterView item in db.ListLejlighedersRaporterView)
+            //{
+            //    ListLejlighedersRaporterView t = item;
+            //}
             return db.ListLejlighedersRaporterView.Where(x => x.Lejlighed_No == lejlighedNo);
 
             //    ListLejlighedersRaporterView listLejlighedersRaporterView = db.ListLejlighedersRaporterView.Find(id);

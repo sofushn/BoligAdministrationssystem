@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Net.Sockets;
 using System.Threading.Tasks;
 using Windows.ApplicationModel.Activation;
 using Windows.UI.Core;
@@ -70,12 +71,32 @@ namespace UWP_App
             //TODO : Make it possible to login or change user
             if (!CurrentUser.IsInitialized)
             {
-                // always login as andelshaver with ID == 0
-                //DB-IMP : change TempTestData to real persistency facade when implemented
-                await CurrentUser.Initialize(0, new TempTestData());
+                if (PingHost("localhost", 57121))
+                {
+                    // always login as andelshaver with ID == 0
+                    //DB-IMP : change TempTestData to real persistency facade when implemented
+                    await CurrentUser.Initialize(1, new PersistencyFacade());
+                }
+                // Use local data if server is down
+                else
+                    await CurrentUser.Initialize(1, new TempTestData());
             }
 
             await Task.CompletedTask;
+        }
+        
+        public static bool PingHost(string hostUri, int portNumber)
+        {
+            try
+            {
+                var client = new TcpClient(hostUri, portNumber);
+                return true;
+            }
+            catch (SocketException ex)
+            {
+                //MessageBox.Show("Error pinging host:'" + hostUri + ":" + portNumber.ToString() + "'");
+                return false;
+            }
         }
     }
 }

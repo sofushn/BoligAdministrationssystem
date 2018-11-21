@@ -32,7 +32,8 @@ namespace UWP_App.Model
 
             // Gets users kontrakter
             // No need the get all the contracts unless the user requests it
-            // _user.Kontrakter = await retriever.GetAndelshaversKontrakterAsync(_user);
+            if(retriever.GetType() == typeof(TempTestData))
+                _user.Kontrakter = await retriever.GetAndelshaversKontrakterAsync(_user);
 
             // Gets users lejligheder
             _user.Lejligheder = await retriever.GetAndelshaversLejlighederAsync(_user);
