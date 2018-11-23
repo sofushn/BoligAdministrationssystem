@@ -116,7 +116,7 @@ namespace UWP_App.ViewModel
             CurrentLejlighed = CurrentUser.User.Lejligheder.FirstOrDefault();
 
             //DB-IMP : Move away from ViewModel
-            _rapportHandler = new StatusRapportHandler(new Persistency.PersistencyFacade());
+            _rapportHandler = new StatusRapportHandler();
 
             StatusRapporter = _rapportHandler.GetLejlighedsRapporter(CurrentLejlighed);
         }

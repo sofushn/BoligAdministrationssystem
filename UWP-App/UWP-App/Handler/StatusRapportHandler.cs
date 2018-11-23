@@ -11,10 +11,10 @@ namespace UWP_App.Handler
         private ICreatePersistency _createPersistency;
         private IRetrievePersistency _retrievePersistency;
         
-        public StatusRapportHandler(IPersistency persistency)
+        public StatusRapportHandler()
         {
-            _createPersistency = persistency;
-            _retrievePersistency = persistency;
+            _createPersistency = CurrentUser.Persistency;
+            _retrievePersistency = CurrentUser.Persistency;
         }
 
         public async Task CreateRapportAsync(string note, StatusValues value, StatusRapportTypes type, ICanBeReportedOn itemToBeREpportedOn)

@@ -95,8 +95,8 @@ namespace UWP_App
             catch (SocketException ex)
             {
                 //MessageBox.Show("Error pinging host:'" + hostUri + ":" + portNumber.ToString() + "'");
-                return false;
             }
+            return false;
         }
     }
 }
