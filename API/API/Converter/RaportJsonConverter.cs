@@ -18,29 +18,47 @@ namespace API.Converter
         public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
         {
             JObject tmp = JObject.Load(reader);
-            Status_Raport report = null;
+            Status_Raport rapport = null;
 
-            switch (tmp.Value<int>("RaportType"))
+            switch (tmp.Value<int>("RapportType"))
             {
                 case 0:
-                    {
-                        report = new Faldstamme_Raport();
-                        break;
-                    }
+                {
+                    //Faldstammer f = tmp.Value<Faldstammer>("Faldstamme");
+                    Faldstamme_Raport fRapport = new Faldstamme_Raport();
+
+                    JToken faldstammeJToken = null;
+                    tmp.TryGetValue("Faldstamme", out faldstammeJToken);
+                    fRapport.FaldstammeDel_ID = faldstammeJToken.Value<int>("Del_ID");
+                    fRapport.Faldstamme_ID = faldstammeJToken.Value<int>("Faldstamme_ID");
+
+
+                    break;
+                }
                 case 1:
-                    {
-                        report = new Vindue_Raport();
-                        break;
-                    }
+                {
+                    Vindue_Raport vRapport = new Vindue_Raport();
+                    JToken vindueJToken = null;
+                    tmp.TryGetValue("Vindue", out vindueJToken);
+                    vRapport.Vindue_ID = vindueJToken.Value<int>("Vindue_ID");
+                    rapport = vRapport;
+                    break;
+                }
                 default:
-                    {
-                        report = new Status_Raport();
-                        break;
-                    }
+                {
+                    rapport = new Status_Raport();
+                    break;
+                }
             }
 
-            serializer.Populate(tmp.CreateReader(), report);
-            return report;
+            
+            rapport.RaportType = tmp.Value<int>("RapportType");
+            rapport.Dato = tmp.Value<DateTime>("Dato");
+            rapport.Godkendt = tmp.Value<string>("Godkendt");
+            rapport.Note = tmp.Value<string>("Note");
+            rapport.Status = tmp.Value<int>("Status");
+            
+            return rapport;
         }
 
         public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)

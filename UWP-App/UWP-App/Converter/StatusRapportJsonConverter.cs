@@ -11,8 +11,39 @@ namespace UWP_App.Converter
 {
     public class StatusRapportJsonConverter : JsonConverter<StatusRapportBase>
     {
-        public override void WriteJson(JsonWriter writer, StatusRapportBase value, JsonSerializer serializer) {
-            throw new NotImplementedException();
+        public override void WriteJson(JsonWriter writer, StatusRapportBase value, JsonSerializer serializer)
+        {
+            writer.WriteStartObject();
+
+            switch (value.RapportType)
+            {
+                case StatusRapportTypes.Faldstamme:
+                {
+                    StatusRapportFaldstamme fr = value as StatusRapportFaldstamme;
+                    foreach (var property in fr.GetType().GetProperties())
+                    {
+                        // write the property name
+                        writer.WritePropertyName(property.Name);
+
+                        serializer.Serialize(writer, property.GetValue(fr));
+                    }
+                    break;
+                }
+                case StatusRapportTypes.Vindue:
+                {
+                    StatusRapportVindue vr = value as StatusRapportVindue;
+                    foreach (var property in vr.GetType().GetProperties())
+                    {
+                        // write the property name
+                        writer.WritePropertyName(property.Name);
+
+                        serializer.Serialize(writer, property.GetValue(vr));
+                    }
+                    break;
+                }
+            }
+                  
+            writer.WriteEndObject();
         }
 
         public override StatusRapportBase ReadJson(JsonReader reader, Type objectType, StatusRapportBase existingValue, bool hasExistingValue, JsonSerializer serializer) {
