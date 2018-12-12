@@ -171,7 +171,6 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\KontraktController.cs" />
     <Compile Include="Controllers\ListAndelshaversLejlighederViewsController.cs" />
-    <Compile Include="Controllers\ListLejlighedersRaporterViewsController.cs" />
     <Compile Include="Controllers\Status_RaportController.cs" />
     <Compile Include="Controllers\VindueController.cs" />
     <Compile Include="Converter\RaportJsonConverter.cs" />
@@ -222,6 +221,7 @@
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\CollectionModelDescription.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
+    <Content Include="Diagram\ClassDiagram1.cd" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
