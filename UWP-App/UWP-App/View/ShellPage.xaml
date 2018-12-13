@@ -19,7 +19,8 @@
                         Header="{Binding SelectedNavigationViewItem.Content}" 
                         MenuItemsSource="{Binding PrimaryItems}" 
                         SelectedItem="{Binding SelectedNavigationViewItem, Mode=TwoWay}" 
-                        IsBackEnabled="{Binding ElementName=contentFrame, FallbackValue=False, Path=CanGoBack}">
+                        IsBackEnabled="{Binding ElementName=contentFrame, FallbackValue=False, Path=CanGoBack}"
+                        AlwaysShowHeader="False">
 
             <i:Interaction.Behaviors>
                 <core:EventTriggerBehavior EventName="SelectionChanged">

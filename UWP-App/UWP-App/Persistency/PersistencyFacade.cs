@@ -137,7 +137,6 @@ namespace UWP_App.Persistency
                     return await getResponse.Content.ReadAsAsync<Andelshaver>();
                 }
 
-                await Task.Yield();
             }
             return null;
         }

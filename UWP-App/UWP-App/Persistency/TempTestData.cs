@@ -18,24 +18,24 @@ namespace UWP_App.Persistency
                 new StatusRapportVindue()
                 {
                     Status_ID = 0,
-                    Status = StatusValues.Normal,
+                    Status = StatusValues.Bad,
                     Dato = DateTime.Now,
-                    Note = "Mit vindue er utæt balalallallalalallal"
+                    Note = "Vinduet i stuen er utæt!",
+                    Godkendt = true
                 },
                 new StatusRapportFaldstamme()
                 {
                     Status_ID = 1,
                     Status = StatusValues.Bad,
                     Dato = DateTime.Now.AddDays(-2d),
-                    Note = "Der løber vand fra min faldstamme"
+                    Note = "Der løber vand fra faldstammen på toilettet"
                 },
                 new StatusRapportFaldstamme()
                 {
                     Status_ID = 2,
                     Status = StatusValues.Important,
                     Dato = DateTime.Now,
-                    Note = "Der fosser ud med vand fra min faldstamme, gulvet er helt vådt",
-                    Godkendt = true
+                    Note = "Der fosser ud med vand fra min faldstamme, gulvet er helt vådt. Hjælp!!!"
                 }
             };
         }

@@ -18,7 +18,7 @@
         <converter:BoolToColorConverter x:Key="boolToColor" />
         <DataTemplate x:Key="gridViewTemplate" x:DataType="data:StatusRapportBase">
             <Grid BorderThickness="2" BorderBrush="{Binding Godkendt, Converter={StaticResource boolToColor}}">
-                <StackPanel Margin="10" Width="150">
+                <StackPanel Margin="10" Width="180" Height="100">
                     <StackPanel Orientation="Horizontal" Spacing="10">
                         <TextBlock Text="{Binding Status_ID}"/>
                         <TextBlock Text="{Binding DatoString}"/>
