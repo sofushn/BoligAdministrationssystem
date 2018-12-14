@@ -17,7 +17,8 @@ namespace UWP_App.Handler
             _retrievePersistency = CurrentUser.Persistency;
         }
 
-        public async Task CreateRapportAsync(string note, StatusValues value, StatusRapportTypes type, ICanBeReportedOn itemToBeREpportedOn)
+        public async Task CreateRapportAsync(string note, StatusValues value, 
+            StatusRapportTypes type, ICanBeReportedOn itemToBeREpportedOn)
         {
             StatusRapportBase baseRapport = null;
             switch (type)

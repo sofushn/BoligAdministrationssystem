@@ -104,7 +104,8 @@
                                  Text="{Binding NewRapportNote, Mode=TwoWay}"
                                  ScrollViewer.VerticalScrollBarVisibility="Auto"/>
 
-                        <Button HorizontalAlignment="Center" Margin="0,30,0,0" Content="Indsend rapport" Command="{Binding CreateStatusRapportCommand}"/>
+                        <Button HorizontalAlignment="Center" Margin="0,30,0,0" 
+                                Content="Indsend rapport" Command="{Binding CreateStatusRapportCommand}"/>
                     </StackPanel>
                 </Grid>
             </SplitView.Pane>
@@ -122,23 +123,28 @@
 
                     <StackPanel Grid.Row="0" Margin="20,0,20,10">
                         <TextBlock Text="Status rapporter der venter på godkendelse:" FontSize="24"/>
-                        <GridView ItemsSource="{Binding IkkeGodkendteStatusRapporter}" SelectedValue="{Binding SelectedStatusRapport, Mode=TwoWay}"
-                                  SelectionMode="Single" Margin="0,10,0,0" ItemTemplate="{StaticResource gridViewTemplate}"/>
+                        <GridView ItemsSource="{Binding IkkeGodkendteStatusRapporter}" 
+                                  SelectedValue="{Binding SelectedStatusRapport, Mode=TwoWay}"
+                                  SelectionMode="Single" Margin="0,10,0,0" 
+                                  ItemTemplate="{StaticResource gridViewTemplate}"/>
                     </StackPanel>
 
                     <Line Stroke="Gray" X2="1" Stretch="Fill" VerticalAlignment="Bottom" Margin="10,0"/>
 
                     <StackPanel Grid.Row="1" Margin="20,10,20,0">
                         <TextBlock Text="Godkente status rapporter:" FontSize="24"/>
-                        <GridView ItemsSource="{Binding GodkendteStatusRapporter}" SelectedValue="{Binding SelectedStatusRapport, Mode=TwoWay}" 
-                                  SelectionMode="Single" Margin="0,10,0,0" ItemTemplate="{StaticResource gridViewTemplate}"/>
+                        <GridView ItemsSource="{Binding GodkendteStatusRapporter}" 
+                                  SelectedValue="{Binding SelectedStatusRapport, Mode=TwoWay}" 
+                                  SelectionMode="Single" Margin="0,10,0,0" 
+                                  ItemTemplate="{StaticResource gridViewTemplate}"/>
                     </StackPanel>
                 </Grid>
             </SplitView.Content>
         </SplitView>
 
         <CommandBar OverflowButtonVisibility="Visible" VerticalAlignment="Bottom" Grid.Row="2">
-            <AppBarToggleButton Icon="Add" Label="Opret rapport"  IsChecked="{Binding IsPaneOpen, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+            <AppBarToggleButton Icon="Add" Label="Opret rapport" 
+                                IsChecked="{Binding IsPaneOpen, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
         </CommandBar>
     </Grid>
 </Page>

@@ -15,7 +15,8 @@ namespace API.Converter
             return objectType == typeof(Status_Raport);
         }
         public override bool CanWrite { get { return false; } }
-        public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
+        public override object ReadJson(JsonReader reader, Type objectType, 
+            object existingValue, JsonSerializer serializer)
         {
             JObject tmp = JObject.Load(reader);
             Status_Raport rapport = null;

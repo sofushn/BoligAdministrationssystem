@@ -10,6 +10,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
     <Page.DataContext>
         <ViewModel:ShellPageViewModel/>
     </Page.DataContext>
@@ -33,13 +34,6 @@
                     <core:InvokeCommandAction Command="{Binding GoBackCommand}"/>
                 </core:EventTriggerBehavior>
             </i:Interaction.Behaviors>
-
-            <!--            
-            <NavigationView.PaneFooter>
-                <NavigationViewItem Content="User" Icon="Contact">
-                </NavigationViewItem>
-            </NavigationView.PaneFooter>
--->
             <Frame x:Name="contentFrame"/>
         </NavigationView>
     </Grid>

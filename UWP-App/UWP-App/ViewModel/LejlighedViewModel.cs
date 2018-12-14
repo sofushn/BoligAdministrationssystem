@@ -124,9 +124,10 @@ namespace UWP_App.ViewModel
 
         private async void CreateStatusRapport()
         {
-            await _rapportHandler.CreateRapportAsync(NewRapportNote, NewRapportStatus, NewRapportType, ItemToBeRepportedOn);
-            IsPaneOpen = false;
+            await _rapportHandler.CreateRapportAsync(NewRapportNote, NewRapportStatus, 
+                NewRapportType, ItemToBeRepportedOn);
 
+            IsPaneOpen = false;
             //TODO : Make async
             StatusRapporter = _rapportHandler.GetLejlighedsRapporter(CurrentLejlighed);
         }

@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="UWP_App.Model.Andelshaver">
+    <Position X="5.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAIAAAAAAAAAAAQgAAAKAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Andelshaver.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UWP_App.Model.CurrentUser">
+    <Position X="7" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAQAAAAAAAAAAAAAAAIAAAAAABAAAAAQ=</HashCode>
+      <FileName>Model\CurrentUser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UWP_App.Model.Faldstamme" BaseTypeListCollapsed="true">
+    <Position X="8.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>GAAAAAAEAAAAABAAAAgAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Model\Faldstamme.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="UWP_App.Model.Kontrakt">
+    <Position X="5.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAgIAAJAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Kontrakt.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UWP_App.Model.Lejlighed">
+    <Position X="7" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EBAAQAKAAAAAAAAAAAAAAAAAAAAAAAAAAAAgQAAAAAA=</HashCode>
+      <FileName>Model\Lejlighed.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UWP_App.Model.StatusRapportBase">
+    <Position X="1.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAAAAAAAAAAAAAAEABABAAACAGAAAA=</HashCode>
+      <FileName>Model\StatusRapport\StatusRapportBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UWP_App.Model.StatusRapportFaldstamme">
+    <Position X="0.5" Y="3.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>Model\StatusRapport\StatusRapportFaldstamme.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UWP_App.Model.StatusRapportVindue">
+    <Position X="3" Y="3.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>Model\StatusRapport\StatusRapportVindue.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UWP_App.Model.Vindue" BaseTypeListCollapsed="true">
+    <Position X="8.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>GAAAAAAEAAAAAAAAAAAAAAAABAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Vindue.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.1" />
+  </Class>
+  <Class Name="UWP_App.Common.NavigationService" Collapsed="true">
+    <Position X="1.25" Y="19" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAARAAAAAAAAAEAAAAQgAABAAE=</HashCode>
+      <FileName>Common\NavigationService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UWP_App.Common.ObservableBase" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="3" Y="19" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAAAAAAAgAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Common\ObservableBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="UWP_App.Common.RelayCommand" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="3" Y="18" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEACAAQAAESAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Common\RelayCommand.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="UWP_App.Common.RelayCommand&lt;T&gt;" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="1" Y="18" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEACAAQAAESAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Common\RelayCommand.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="UWP_App.ViewModel.LejlighedViewModel" Collapsed="true">
+    <Position X="1.25" Y="21.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>A4AAAJADABAAQAgEACAQAAAgCAQAAAAEoCAABAAAMcE=</HashCode>
+      <FileName>ViewModel\LejlighedViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UWP_App.ViewModel.ShellPageViewModel" Collapsed="true">
+    <Position X="3.5" Y="21.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAACAAAAAACAAAAAAEAAABCCAAAQACgAAAA=</HashCode>
+      <FileName>ViewModel\ShellPageViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UWP_App.ViewModel.NavigationLink&lt;T&gt;" Collapsed="true">
+    <Position X="3.25" Y="22.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAEAAAAAAAAQAAAAAADAAAAAAAACAA=</HashCode>
+      <FileName>ViewModel\ShellPageViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UWP_App.View.LejlighedPage" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.75" Y="20.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\LejlighedPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="UWP_App.View.ShellPage" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="6" Y="20.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\ShellPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="UWP_App.Persistency.PersistencyFacade" Collapsed="true">
+    <Position X="16" Y="18.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAQAAAAkAIAAAAAEAAAAAAAAgAIAAAIAA=</HashCode>
+      <FileName>Persistency\PersistencyFacade.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="UWP_App.Handler.StatusRapportHandler" Collapsed="true">
+    <Position X="6.25" Y="18.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAAABAEAAAAAAAAAAAAAAAAEAAAAAA=</HashCode>
+      <FileName>Handler\StatusRapportHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UWP_App.Converter.StatusRapportJsonConverter">
+    <Position X="15" Y="21.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Converter\StatusRapportJsonConverter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UWP_App.Converter.BoolToColorConverter" Collapsed="true">
+    <Position X="15" Y="20.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Converter\BoolToColorConverter.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="UWP_App.Model.ICanBeReportedOn">
+    <Position X="5.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Interface\ICanBeReportedOn.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="UWP_App.Persistency.ICreatePersistency" Collapsed="true">
+    <Position X="15" Y="16" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Persistency\Interface\ICreatePersistency.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="UWP_App.Persistency.IPersistency" Collapsed="true">
+    <Position X="15.75" Y="17.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Persistency\Interface\IPersistency.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="UWP_App.Persistency.IRetrievePersistency" Collapsed="true">
+    <Position X="17" Y="16.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAAAAAAEAIAAAAAEAAAAAAAAgAIAAAIAA=</HashCode>
+      <FileName>Persistency\Interface\IRetrievePersistency.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="UWP_App.Model.StatusRapportTypes">
+    <Position X="7" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAIAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Enums\StatusRapportTypes.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="UWP_App.Model.StatusValues">
+    <Position X="8.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAAAAAAAAAAAAAQIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Enums\StatusValues.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

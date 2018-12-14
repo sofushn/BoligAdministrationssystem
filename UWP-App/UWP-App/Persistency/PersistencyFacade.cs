@@ -18,7 +18,8 @@ namespace UWP_App.Persistency
 
             client.BaseAddress = new Uri("http://localhost:57121/api/");
             client.DefaultRequestHeaders.Clear();
-            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("Application/json"));
+            client.DefaultRequestHeaders.Accept.Add(
+                new MediaTypeWithQualityHeaderValue("Application/json"));
 
             return client;
         }
