@@ -23,32 +23,20 @@ namespace UWP_App.ViewModel
         private StatusRapportBase _selectedStatusRapport;
         private StatusRapportHandler _rapportHandler;
 
-
         public Lejlighed CurrentLejlighed { get; set; }
 
         public IEnumerable<StatusRapportBase> GodkendteStatusRapporter
         {
             get
             {
-                return StatusRapporter.Where(x => x.Godkendt);
+                return _statusRapporter.Where(x => x.Godkendt);
             }
         }
         public IEnumerable<StatusRapportBase> IkkeGodkendteStatusRapporter
         {
             get
             {
-                return StatusRapporter.Where(x => !x.Godkendt);
-            }
-        }
-
-        private IEnumerable<StatusRapportBase> StatusRapporter
-        {
-            get => _statusRapporter;
-            set
-            {
-                _statusRapporter = value;
-                OnPropertyChanged("GodkendteStatusRapporter");
-                OnPropertyChanged("IkkeGodkendteStatusRapporter");
+                return _statusRapporter.Where(x => !x.Godkendt);
             }
         }
 
@@ -118,7 +106,7 @@ namespace UWP_App.ViewModel
             //DB-IMP : Move away from ViewModel
             _rapportHandler = new StatusRapportHandler();
 
-            StatusRapporter = _rapportHandler.GetLejlighedsRapporter(CurrentLejlighed);
+            SetStatusRapporter(_rapportHandler.GetLejlighedsRapporter(CurrentLejlighed));
         }
         
 
@@ -129,8 +117,16 @@ namespace UWP_App.ViewModel
 
             IsPaneOpen = false;
             //TODO : Make async
-            StatusRapporter = _rapportHandler.GetLejlighedsRapporter(CurrentLejlighed);
+            SetStatusRapporter(_rapportHandler.GetLejlighedsRapporter(CurrentLejlighed));
         }
+
+        private void SetStatusRapporter(IEnumerable<StatusRapportBase> statusRapporter)
+        {
+            _statusRapporter = statusRapporter;
+            OnPropertyChanged("GodkendteStatusRapporter");
+            OnPropertyChanged("IkkeGodkendteStatusRapporter");
+        }
+
 
         private void StatusRapportTypeChanged(StatusRapportTypes value)
         {
